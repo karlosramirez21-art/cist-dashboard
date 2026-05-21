@@ -23,6 +23,29 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .alert{background:linear-gradient(135deg,var(--warm-dk),var(--warm));color:white;padding:9px 28px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:11px}
 .alert strong{font-size:14px}
 .main{padding:20px 28px;display:grid;gap:18px}
+
+/* ✅ v7 Hero Meta vs Forecast */
+.hero-meta{background:linear-gradient(135deg,#1a1410,#3a2e22);color:white;border-radius:var(--radius);padding:22px 26px;display:grid;grid-template-columns:1fr 2fr;gap:24px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.hero-meta .hm-left{border-right:1px solid #5a4e42;padding-right:24px}
+.hm-pretitle{font-size:9px;color:var(--warm);letter-spacing:.1em;font-weight:700;text-transform:uppercase}
+.hm-meta-val{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;line-height:1;color:white;margin:6px 0}
+.hm-meta-sub{font-size:10px;color:#bbb;letter-spacing:.05em}
+.hm-right{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.hm-progress-row{display:flex;align-items:center;gap:12px}
+.hm-pr-label{font-size:10px;color:#ccc;min-width:90px;letter-spacing:.05em;font-weight:600}
+.hm-pr-track{flex:1;background:#2a2218;border-radius:20px;height:12px;overflow:hidden;border:1px solid #3a2e22}
+.hm-pr-fill{height:100%;border-radius:20px;display:flex;align-items:center;justify-content:flex-end;padding-right:6px}
+.hm-pr-fill.cobrado{background:linear-gradient(90deg,var(--warm-dk),var(--warm))}
+.hm-pr-fill.proy.verde{background:linear-gradient(90deg,#2d7a4f,#5aa87a)}
+.hm-pr-fill.proy.ambar{background:linear-gradient(90deg,#d4860a,#f0b040)}
+.hm-pr-fill.proy.rojo{background:linear-gradient(90deg,#c0392b,#e06050)}
+.hm-pr-val{font-family:'DM Mono';font-size:10px;color:white;font-weight:700;min-width:110px}
+.hm-gap{background:#2a2218;border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:14px;border-left:3px solid var(--warm)}
+.hm-gap-label{font-size:10px;color:#aaa;letter-spacing:.05em}
+.hm-gap-val{font-family:'DM Mono';font-size:14px;color:white;font-weight:700}
+.hm-gap-act{font-size:10px;color:var(--warm);font-weight:600}
+@media(max-width:800px){.hero-meta{grid-template-columns:1fr}.hero-meta .hm-left{border-right:none;border-bottom:1px solid #5a4e42;padding-right:0;padding-bottom:18px}}
+
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
 .kpi-card{background:var(--card-bg);border-radius:var(--radius);padding:16px 18px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-top:3px solid var(--warm);position:relative}
 .kpi-card.rojo{border-top-color:var(--rojo)}.kpi-card.ambar{border-top-color:var(--ambar)}.kpi-card.verde{border-top-color:var(--verde)}
@@ -40,21 +63,16 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .badge{background:var(--warm);color:white;border-radius:10px;padding:1px 7px;font-size:9px}
 .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
 .two-col-60{display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
-@media(max-width:800px){.three-col,.two-col-60{grid-template-columns:1fr}}
-.staff-table{width:100%;border-collapse:collapse;font-size:11px}
-.staff-table th{text-align:left;color:var(--mid);font-weight:600;font-size:9px;letter-spacing:.05em;padding:3px 0 7px}
-.staff-table td{padding:6px 0;border-bottom:1px solid #f0ebe3;vertical-align:middle}
-.staff-table tr:last-child td{border-bottom:none}
-.emp-name{font-weight:600}.num{text-align:right;padding-right:10px!important;font-family:'DM Mono';font-size:10px}
-.bar-wrap{background:var(--sand);border-radius:10px;height:5px;overflow:hidden;width:70px;display:inline-block;vertical-align:middle}
-.bar-fill{background:var(--warm);height:100%;border-radius:10px}
-.bar-pct{font-family:'DM Mono';font-size:9px;color:var(--mid);margin-left:5px}
+.two-col-50{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.three-col,.two-col-60,.two-col-50{grid-template-columns:1fr}}
+
 .svc-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .svc-name{font-size:10px;min-width:120px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .svc-bar-wrap{flex:1;background:var(--sand);border-radius:10px;height:7px;overflow:hidden}
 .svc-bar{background:linear-gradient(90deg,var(--warm-dk),var(--warm));height:100%;border-radius:10px}
 .svc-cnt{font-family:'DM Mono';font-size:10px;color:var(--mid);min-width:28px;text-align:right}
 .svc-rev{font-family:'DM Mono';font-size:10px;color:var(--warm-dk);min-width:48px;text-align:right;font-weight:600}
+
 .dia-chart{display:flex;align-items:flex-end;gap:8px;height:110px;padding-top:8px}
 .dia-col{display:flex;flex-direction:column;align-items:center;flex:1;height:100%}
 .dia-pct-label{font-family:'DM Mono';font-size:9px;color:var(--mid);margin-bottom:3px}
@@ -65,6 +83,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .dia-bar.rojo{background:linear-gradient(180deg,#c0392b,#e06050)}
 .dia-label{font-size:9px;font-weight:700;color:var(--mid);margin-top:4px}
 .dia-citas{font-size:8px;color:var(--mid)}
+
 .churn-summary{display:flex;gap:12px;margin-bottom:14px}
 .csb{flex:1;padding:10px 12px;border-radius:10px;text-align:center}
 .csb.r{background:#fdecea;border:1px solid #e8b4b0}
@@ -73,57 +92,147 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .csb-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700}
 .csb.r .csb-num{color:var(--rojo)}.csb.a .csb-num{color:var(--ambar)}.csb.v .csb-num{color:var(--verde)}
 .csb-lbl{font-size:9px;font-weight:600;color:var(--mid);letter-spacing:.04em}
-.churn-table{width:100%;border-collapse:collapse;font-size:11px}
-.churn-table th{text-align:left;color:var(--mid);font-weight:600;font-size:9px;letter-spacing:.05em;padding:3px 0 8px}
-.churn-table td{padding:6px 0;border-bottom:1px solid #f0ebe3;vertical-align:middle}
-.churn-table tr:last-child td{border-bottom:none}
+
+.churn-table,.staff-table,.pareto-table,.next7-table{width:100%;border-collapse:collapse;font-size:11px}
+.churn-table th,.staff-table th,.pareto-table th,.next7-table th{text-align:left;color:var(--mid);font-weight:600;font-size:9px;letter-spacing:.05em;padding:3px 0 8px}
+.churn-table td,.staff-table td,.pareto-table td,.next7-table td{padding:6px 0;border-bottom:1px solid #f0ebe3;vertical-align:middle}
+.churn-table tr:last-child td,.staff-table tr:last-child td,.pareto-table tr:last-child td,.next7-table tr:last-child td{border-bottom:none}
 .rank{font-family:'DM Mono';font-size:10px;color:var(--mid);width:24px}
 .cli-name{font-weight:600;font-size:11px}
+.num{text-align:right;padding-right:10px!important;font-family:'DM Mono';font-size:10px}
+.num-strong{text-align:right;padding-right:10px!important;font-family:'DM Mono';font-size:11px;color:var(--warm-dk);font-weight:700}
+.num.pct{color:var(--warm-dk);font-weight:700}
 .dias-badge{color:white;padding:2px 7px;border-radius:10px;font-size:9px;font-weight:700;font-family:'DM Mono'}
 .tel{font-family:'DM Mono';font-size:9px;color:var(--mid)}
+.serv-cell{font-size:10px;color:var(--mid)}
+.esth-cell{font-size:10px;color:var(--dark);font-weight:600}
 .churn-nota{font-size:9px;color:var(--mid);margin-top:10px;padding:8px 10px;background:var(--sand);border-radius:6px;border-left:3px solid var(--warm)}
+
+/* ✅ v7 Acciones de churn */
+.churn-actions{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.btn-action{background:var(--dark);color:white;border:none;padding:7px 14px;border-radius:8px;font-size:10px;font-weight:600;letter-spacing:.05em;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:background .15s}
+.btn-action:hover{background:var(--warm-dk)}
+.btn-action.outline{background:white;color:var(--warm-dk);border:1px solid var(--warm)}
+.btn-action.outline:hover{background:var(--sand)}
+
+/* ✅ v7 Próximos 7 días */
+.next7-table .dom{background:#f5f1ea;color:#999}
+.next7-table .cerrado{font-size:10px;text-align:center;color:#999;font-style:italic}
+.next7-table .opp{background:#fef8e6}
+.next7-table .full{background:#e8f5ee}
+.tag-opp{background:var(--ambar);color:white;padding:2px 7px;border-radius:10px;font-size:9px;font-weight:600}
+.tag-full{background:var(--verde);color:white;padding:2px 7px;border-radius:10px;font-size:9px;font-weight:600}
+.bar-wrap-7d{display:inline-block;width:60px;background:var(--sand);border-radius:10px;height:6px;overflow:hidden;vertical-align:middle}
+.bar-fill-7d{height:100%;border-radius:10px}
+.bar-fill-7d.verde{background:var(--verde)}.bar-fill-7d.ambar{background:var(--ambar)}.bar-fill-7d.rojo{background:var(--rojo)}
+.bar-pct{font-family:'DM Mono';font-size:9px;color:var(--mid);margin-left:5px;vertical-align:middle}
+
+/* ✅ v7 Pareto */
+.pareto-summary{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding:10px 12px;background:var(--sand);border-radius:8px}
+.pareto-pct{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--warm-dk)}
+.pareto-lbl{font-size:10px;color:var(--mid);letter-spacing:.05em}
+.pareto-alert{font-size:10px;color:var(--mid);padding:8px 10px;background:#fef6e6;border-radius:6px;margin-top:10px;border-left:3px solid var(--ambar)}
+
+/* ✅ v7 Equipo */
+.esth-card{background:white;border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:12px;overflow:hidden}
+.esth-card summary{padding:14px 18px;cursor:pointer;list-style:none;user-select:none;transition:background .15s}
+.esth-card summary::-webkit-details-marker{display:none}
+.esth-card summary:hover{background:var(--cream)}
+.esth-card[open] summary{background:var(--cream);border-bottom:1px solid var(--sand)}
+.esth-head{display:grid;grid-template-columns:1fr 2fr auto;gap:16px;align-items:center}
+.esth-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--dark)}
+.esth-sub{font-size:9px;color:var(--mid);letter-spacing:.05em;margin-top:1px}
+.esth-quick{display:flex;gap:18px}
+.eq-label{font-size:8px;color:var(--mid);letter-spacing:.07em;text-transform:uppercase;font-weight:700}
+.eq-val{font-family:'DM Mono';font-size:13px;font-weight:700;color:var(--dark);margin-top:2px}
+.eq-val.verde{color:var(--verde)}.eq-val.ambar{color:var(--ambar)}.eq-val.rojo{color:var(--rojo)}
+.esth-arrow{font-size:14px;color:var(--warm);transition:transform .2s}
+.esth-card[open] .esth-arrow{transform:rotate(180deg)}
+.esth-detail{padding:14px 18px 18px}
+.kpi-mini-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:14px}
+.km{background:var(--cream);border-radius:8px;padding:8px 10px;border-left:3px solid var(--warm)}
+.km.verde{border-left-color:var(--verde)}.km.ambar{border-left-color:var(--ambar)}.km.rojo{border-left-color:var(--rojo)}
+.km-l{font-size:8px;color:var(--mid);letter-spacing:.06em;font-weight:700;text-transform:uppercase}
+.km-v{font-family:'DM Mono';font-size:14px;font-weight:700;color:var(--dark);margin-top:2px}
+.km.verde .km-v{color:var(--verde)}.km.ambar .km-v{color:var(--ambar)}.km.rojo .km-v{color:var(--rojo)}
+.trat-section{border-top:1px solid var(--sand);padding-top:12px}
+.trat-title{font-size:9px;color:var(--mid);letter-spacing:.06em;font-weight:700;text-transform:uppercase;margin-bottom:7px}
+.trat-item{display:flex;justify-content:space-between;font-size:10px;padding:4px 0;border-bottom:1px dashed #f0ebe3}
+.trat-item:last-child{border-bottom:none}
+.trat-num{font-family:'DM Mono';color:var(--warm-dk);font-weight:700}
+
 .footer{text-align:center;padding:16px 28px;font-size:9px;color:var(--mid);border-top:1px solid var(--sand);margin-top:6px;letter-spacing:.05em}
+
+/* Hidden CSV/Telefonos data for copy */
+.hidden-data{display:none}
 </style>
 </head>
 <body>
 <div class="header">
   <div><div class="hbrand">Carla Infante Skin Therapy</div><div class="hsub">Dashboard · Mes en curso · Los Arcos Plaza 2, Samborondón</div></div>
-  <div><div class="hmes">mayo de 2026</div><div class="hfecha">Generado 20 may 2026 · 7:30 AM ECT</div></div>
+  <div><div class="hmes">mayo de 2026</div><div class="hfecha">Generado 21 may 2026 · 7:30 AM ECT</div></div>
 </div>
 <div class="periodo">
   <div class="p-label">Avance del mes</div>
-  <div class="p-track"><div class="p-fill" style="width:65%"></div></div>
-  <div class="p-pct">65%</div>
-  <div class="p-det">Día 20 · 17/26 días hábiles · 9 restantes</div>
+  <div class="p-track"><div class="p-fill" style="width:69%"></div></div>
+  <div class="p-pct">69%</div>
+  <div class="p-det">Día 21 · 18/26 días hábiles · 8 restantes</div>
 </div>
 <div class="alert">
-  <span>📅 Quedan <strong>9</strong> días hábiles</span><span>·</span>
-  <span>Pendientes: <strong>10</strong></span><span>·</span>
-  <span>Proyección: <strong>$23.270</strong> 🟢</span><span>·</span>
-  <span>Revenue en riesgo: <strong>$32.341</strong> 🔴</span>
+  <span>📅 Quedan <strong>8</strong> días hábiles</span><span>·</span>
+  <span>Pendientes: <strong>9</strong></span><span>·</span>
+  <span>Proyección: <strong>$21.977</strong> 🟡</span><span>·</span>
+  <span>Revenue en riesgo: <strong>$43.516</strong> 🔴</span>
 </div>
 <div class="main">
+
+<!-- ✅ v7 HERO: Meta vs Forecast -->
+<div class="hero-meta">
+  <div class="hm-left">
+    <div class="hm-pretitle">Meta mensual</div>
+    <div class="hm-meta-val">$25.000</div>
+    <div class="hm-meta-sub">Avance: 60.9% · Proyección: 87.9% 🟡</div>
+  </div>
+  <div class="hm-right">
+    <div class="hm-progress-row">
+      <div class="hm-pr-label">Cobrado hoy</div>
+      <div class="hm-pr-track"><div class="hm-pr-fill cobrado" style="width:60.9%"></div></div>
+      <div class="hm-pr-val">$15.215 (60.9%)</div>
+    </div>
+    <div class="hm-progress-row">
+      <div class="hm-pr-label">Proyección fin mes</div>
+      <div class="hm-pr-track"><div class="hm-pr-fill proy ambar" style="width:87.9%"></div></div>
+      <div class="hm-pr-val">$21.977 (87.9%)</div>
+    </div>
+    <div class="hm-gap">
+      <div><div class="hm-gap-label">Gap a meta</div><div class="hm-gap-val">$3.023</div></div>
+      <div style="text-align:right"><div class="hm-gap-label">Citas/día requeridas</div><div class="hm-gap-act">~4 citas × 8 días</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- KPI Grid principal (expandido v7) -->
 <div class="kpi-grid">
   <div class="kpi-card">
     <div class="kpi-sem">🟢</div>
     <div class="kpi-label">Revenue del mes</div>
     <div class="kpi-val">$15.215</div>
     <div class="kpi-sub">Cobrado a la fecha</div>
-    <div class="kpi-proy">Proyección: $23.270</div>
-    <div class="rev-avance"><div class="rev-track"><div class="rev-fill" style="width:65%"></div></div><span class="rev-pct">65% meta</span></div>
+    <div class="kpi-proy">Proyección: $21.977</div>
+    <div class="rev-avance"><div class="rev-track"><div class="rev-fill" style="width:69%"></div></div><span class="rev-pct">69% pace</span></div>
   </div>
   <div class="kpi-card">
     <div class="kpi-label">Citas atendidas</div>
     <div class="kpi-val mono">149</div>
-    <div class="kpi-sub">Proyección: 228 citas</div>
+    <div class="kpi-sub">Proyección: 215 citas</div>
     <div class="kpi-proy">Capacidad mes: 390</div>
   </div>
   <div class="kpi-card ambar">
     <div class="kpi-sem">🟡</div>
     <div class="kpi-label">Ocupación</div>
-    <div class="kpi-val">58.4%</div>
+    <div class="kpi-val">55.2%</div>
     <div class="kpi-sub">A la fecha</div>
-    <div class="kpi-proy">Proy. fin de mes: 58.5%</div>
+    <div class="kpi-proy">Proy. fin de mes: 55.1%</div>
   </div>
   <div class="kpi-card">
     <div class="kpi-sem">🟢</div>
@@ -131,6 +240,20 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <div class="kpi-val">$102</div>
     <div class="kpi-sub">Por cita atendida</div>
     <div class="kpi-proy">Meta: $100+</div>
+  </div>
+  <div class="kpi-card rojo">
+    <div class="kpi-sem">🔴</div>
+    <div class="kpi-label">Re-booking (mismo día)</div>
+    <div class="kpi-val">0.7%</div>
+    <div class="kpi-sub">1 de 149 citas</div>
+    <div class="kpi-proy">Benchmark: 60-70%</div>
+  </div>
+  <div class="kpi-card verde">
+    <div class="kpi-sem">🟢</div>
+    <div class="kpi-label">Conversión 1ª→2ª (60d)</div>
+    <div class="kpi-val">56.4%</div>
+    <div class="kpi-sub">Cohorte: 250 clientas</div>
+    <div class="kpi-proy">141 volvieron</div>
   </div>
   <div class="kpi-card ambar">
     <div class="kpi-label">Cancelación</div>
@@ -144,74 +267,301 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <div class="kpi-sub">Primera visita este mes</div>
   </div>
 </div>
-<div class="two-col-60">
+
+<!-- ✅ v7 EQUIPO - scorecard expandido con drill-down -->
+<div class="card">
+  <div class="card-title">Equipo — Scorecard del mes
+    <span class="badge" style="margin-left:auto">4 esteticistas</span>
+    <span style="font-size:9px;color:var(--mid);font-weight:400;margin-left:8px">Haz click para ver detalle</span>
+  </div>
+  <details class="esth-card">
+    <summary>
+      <div class="esth-head">
+        <div>
+          <div class="esth-name">Carla</div>
+          <div class="esth-sub">Infante · 14 días trab.</div>
+        </div>
+        <div class="esth-quick">
+          <div><div class="eq-label">Citas</div><div class="eq-val">51</div></div>
+          <div><div class="eq-label">Revenue</div><div class="eq-val">$6.038</div></div>
+          <div><div class="eq-label">Ticket</div><div class="eq-val verde">$118</div></div>
+        </div>
+        <span class="esth-arrow">▾</span>
+      </div>
+    </summary>
+    <div class="esth-detail">
+      <div class="kpi-mini-grid">
+        <div class="km verde"><div class="km-l">Ocupación</div><div class="km-v">72.9%</div></div>
+        <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">0%</div></div>
+        <div class="km rojo"><div class="km-l">Cancelación</div><div class="km-v">12.1%</div></div>
+        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">43.5%</div></div>
+        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">56.1%</div></div>
+        <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">48</div></div>
+      </div>
+      <div class="trat-section">
+        <div class="trat-title">Top 3 tratamientos que hace</div>
+        <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">18</span></div><div class="trat-item"><span>Glacial Gloss</span><span class="trat-num">9</span></div><div class="trat-item"><span>Contorno de Labios</span><span class="trat-num">6</span></div>
+      </div>
+    </div>
+  </details><details class="esth-card">
+    <summary>
+      <div class="esth-head">
+        <div>
+          <div class="esth-name">Karla</div>
+          <div class="esth-sub">Anzules · 15 días trab.</div>
+        </div>
+        <div class="esth-quick">
+          <div><div class="eq-label">Citas</div><div class="eq-val">39</div></div>
+          <div><div class="eq-label">Revenue</div><div class="eq-val">$3.023</div></div>
+          <div><div class="eq-label">Ticket</div><div class="eq-val rojo">$78</div></div>
+        </div>
+        <span class="esth-arrow">▾</span>
+      </div>
+    </summary>
+    <div class="esth-detail">
+      <div class="kpi-mini-grid">
+        <div class="km ambar"><div class="km-l">Ocupación</div><div class="km-v">52%</div></div>
+        <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">2.6%</div></div>
+        <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">7.1%</div></div>
+        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">67.5%</div></div>
+        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">68.9%</div></div>
+        <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">36</div></div>
+      </div>
+      <div class="trat-section">
+        <div class="trat-title">Top 3 tratamientos que hace</div>
+        <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">8</span></div><div class="trat-item"><span>Shaper</span><span class="trat-num">7</span></div><div class="trat-item"><span>Glacial Glide</span><span class="trat-num">5</span></div>
+      </div>
+    </div>
+  </details><details class="esth-card">
+    <summary>
+      <div class="esth-head">
+        <div>
+          <div class="esth-name">Milena</div>
+          <div class="esth-sub">Montalván · 7 días trab.</div>
+        </div>
+        <div class="esth-quick">
+          <div><div class="eq-label">Citas</div><div class="eq-val">21</div></div>
+          <div><div class="eq-label">Revenue</div><div class="eq-val">$2.448</div></div>
+          <div><div class="eq-label">Ticket</div><div class="eq-val verde">$117</div></div>
+        </div>
+        <span class="esth-arrow">▾</span>
+      </div>
+    </summary>
+    <div class="esth-detail">
+      <div class="kpi-mini-grid">
+        <div class="km ambar"><div class="km-l">Ocupación</div><div class="km-v">60%</div></div>
+        <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">0%</div></div>
+        <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">8.7%</div></div>
+        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">25.7%</div></div>
+        <div class="km ambar"><div class="km-l">Retención 1ª</div><div class="km-v">48.4%</div></div>
+        <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">21</div></div>
+      </div>
+      <div class="trat-section">
+        <div class="trat-title">Top 3 tratamientos que hace</div>
+        <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">3</span></div><div class="trat-item"><span>Facial Express Personalizado</span><span class="trat-num">2</span></div><div class="trat-item"><span>Shaper</span><span class="trat-num">2</span></div>
+      </div>
+    </div>
+  </details><details class="esth-card">
+    <summary>
+      <div class="esth-head">
+        <div>
+          <div class="esth-name">Milena</div>
+          <div class="esth-sub">Albiño · 13 días trab.</div>
+        </div>
+        <div class="esth-quick">
+          <div><div class="eq-label">Citas</div><div class="eq-val">38</div></div>
+          <div><div class="eq-label">Revenue</div><div class="eq-val">$2.445</div></div>
+          <div><div class="eq-label">Ticket</div><div class="eq-val rojo">$64</div></div>
+        </div>
+        <span class="esth-arrow">▾</span>
+      </div>
+    </summary>
+    <div class="esth-detail">
+      <div class="kpi-mini-grid">
+        <div class="km ambar"><div class="km-l">Ocupación</div><div class="km-v">58.5%</div></div>
+        <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">0%</div></div>
+        <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">11.6%</div></div>
+        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">50.1%</div></div>
+        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">63%</div></div>
+        <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">35</div></div>
+      </div>
+      <div class="trat-section">
+        <div class="trat-title">Top 3 tratamientos que hace</div>
+        <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">4</span></div><div class="trat-item"><span>Glacial Glide</span><span class="trat-num">4</span></div><div class="trat-item"><span>The Experience Skin Therapy</span><span class="trat-num">4</span></div>
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- Próximos 7 días + Ocupación día semana -->
+<div class="two-col-50">
   <div class="card">
-    <div class="card-title">Equipo — desempeño del mes</div>
-    <table class="staff-table">
-      <thead><tr><th>Nombre</th><th style="text-align:right;padding-right:10px">Citas</th><th style="text-align:right;padding-right:10px">Revenue</th><th style="text-align:right;padding-right:10px">Ticket</th><th>Ocup.</th></tr></thead>
-      <tbody><tr>
-    <td class="emp-name">Carla</td>
-    <td class="num">51</td>
-    <td class="num">$6.038</td>
-    <td class="num">$118</td>
-    <td><div class="bar-wrap"><div class="bar-fill" style="width:60%"></div></div><span class="bar-pct">60%</span></td>
-  </tr><tr>
-    <td class="emp-name">Karla</td>
-    <td class="num">39</td>
-    <td class="num">$3.023</td>
-    <td class="num">$78</td>
-    <td><div class="bar-wrap"><div class="bar-fill" style="width:46%"></div></div><span class="bar-pct">46%</span></td>
-  </tr><tr>
-    <td class="emp-name">Milena</td>
-    <td class="num">38</td>
-    <td class="num">$2.445</td>
-    <td class="num">$64</td>
-    <td><div class="bar-wrap"><div class="bar-fill" style="width:45%"></div></div><span class="bar-pct">45%</span></td>
-  </tr><tr>
-    <td class="emp-name">Milena</td>
-    <td class="num">21</td>
-    <td class="num">$2.448</td>
-    <td class="num">$117</td>
-    <td><div class="bar-wrap"><div class="bar-fill" style="width:25%"></div></div><span class="bar-pct">25%</span></td>
+    <div class="card-title">Próximos 7 días <span class="badge" style="background:#7b68aa">Forward-looking</span></div>
+    <table class="next7-table">
+      <thead><tr><th>Día</th><th style="text-align:right;padding-right:10px">Citas/Cap</th><th>Ocupación</th><th style="text-align:right;padding-right:10px">Huecos</th><th>Por esthetician</th><th>Flag</th></tr></thead>
+      <tbody><tr class="opp">
+    <td><strong>vie</strong> 22</td>
+    <td class="num-strong">0/15</td>
+    <td><div class="bar-wrap-7d"><div class="bar-fill-7d rojo" style="width:0%"></div></div><span class="bar-pct">0%</span></td>
+    <td class="num">15</td>
+    <td class="esth-cell">—</td>
+    <td><span class="tag-opp">Oportunidad</span></td>
+  </tr><tr class="opp">
+    <td><strong>sáb</strong> 23</td>
+    <td class="num-strong">0/15</td>
+    <td><div class="bar-wrap-7d"><div class="bar-fill-7d rojo" style="width:0%"></div></div><span class="bar-pct">0%</span></td>
+    <td class="num">15</td>
+    <td class="esth-cell">—</td>
+    <td><span class="tag-opp">Oportunidad</span></td>
+  </tr><tr class="dom"><td>dom 24</td><td colspan="5" class="cerrado">Cerrado</td></tr><tr class="opp">
+    <td><strong>lun</strong> 25</td>
+    <td class="num-strong">0/15</td>
+    <td><div class="bar-wrap-7d"><div class="bar-fill-7d rojo" style="width:0%"></div></div><span class="bar-pct">0%</span></td>
+    <td class="num">15</td>
+    <td class="esth-cell">—</td>
+    <td><span class="tag-opp">Oportunidad</span></td>
+  </tr><tr class="opp">
+    <td><strong>mar</strong> 26</td>
+    <td class="num-strong">0/15</td>
+    <td><div class="bar-wrap-7d"><div class="bar-fill-7d rojo" style="width:0%"></div></div><span class="bar-pct">0%</span></td>
+    <td class="num">15</td>
+    <td class="esth-cell">—</td>
+    <td><span class="tag-opp">Oportunidad</span></td>
+  </tr><tr class="opp">
+    <td><strong>mié</strong> 27</td>
+    <td class="num-strong">1/15</td>
+    <td><div class="bar-wrap-7d"><div class="bar-fill-7d rojo" style="width:6.7%"></div></div><span class="bar-pct">6.7%</span></td>
+    <td class="num">14</td>
+    <td class="esth-cell">Karla:1</td>
+    <td><span class="tag-opp">Oportunidad</span></td>
+  </tr><tr class="opp">
+    <td><strong>jue</strong> 28</td>
+    <td class="num-strong">0/15</td>
+    <td><div class="bar-wrap-7d"><div class="bar-fill-7d rojo" style="width:0%"></div></div><span class="bar-pct">0%</span></td>
+    <td class="num">15</td>
+    <td class="esth-cell">—</td>
+    <td><span class="tag-opp">Oportunidad</span></td>
   </tr></tbody>
     </table>
   </div>
   <div class="card">
-    <div class="card-title">Ocupación por día de semana</div>
+    <div class="card-title">Ocupación histórica por día de semana</div>
     <div class="dia-chart"><div class="dia-col">
     <div class="dia-pct-label">48.9%</div>
-    <div class="dia-bar-track"><div class="dia-bar ambar" style="height:56%"></div></div>
+    <div class="dia-bar-track"><div class="dia-bar ambar" style="height:73%"></div></div>
     <div class="dia-label">Lun</div>
     <div class="dia-citas">22</div>
   </div><div class="dia-col">
     <div class="dia-pct-label">51.1%</div>
-    <div class="dia-bar-track"><div class="dia-bar ambar" style="height:59%"></div></div>
+    <div class="dia-bar-track"><div class="dia-bar ambar" style="height:77%"></div></div>
     <div class="dia-label">Mar</div>
     <div class="dia-citas">23</div>
   </div><div class="dia-col">
     <div class="dia-pct-label">40%</div>
-    <div class="dia-bar-track"><div class="dia-bar rojo" style="height:46%"></div></div>
+    <div class="dia-bar-track"><div class="dia-bar rojo" style="height:60%"></div></div>
     <div class="dia-label">Mié</div>
     <div class="dia-citas">18</div>
   </div><div class="dia-col">
-    <div class="dia-pct-label">86.7%</div>
-    <div class="dia-bar-track"><div class="dia-bar verde" style="height:100%"></div></div>
+    <div class="dia-pct-label">57.8%</div>
+    <div class="dia-bar-track"><div class="dia-bar ambar" style="height:87%"></div></div>
     <div class="dia-label">Jue</div>
     <div class="dia-citas">26</div>
   </div><div class="dia-col">
     <div class="dia-pct-label">66.7%</div>
-    <div class="dia-bar-track"><div class="dia-bar verde" style="height:77%"></div></div>
+    <div class="dia-bar-track"><div class="dia-bar verde" style="height:100%"></div></div>
     <div class="dia-label">Vie</div>
     <div class="dia-citas">30</div>
   </div><div class="dia-col">
     <div class="dia-pct-label">66.7%</div>
-    <div class="dia-bar-track"><div class="dia-bar verde" style="height:77%"></div></div>
+    <div class="dia-bar-track"><div class="dia-bar verde" style="height:100%"></div></div>
     <div class="dia-label">Sáb</div>
     <div class="dia-citas">30</div>
   </div></div>
   </div>
 </div>
-<div class="three-col">
+
+<!-- ✅ v7 PARETO -->
+<div class="two-col-60">
+  <div class="card">
+    <div class="card-title">Pareto — Top 10 clientas del mes
+      <span style="margin-left:auto;font-size:9px;color:var(--mid);font-weight:400">Concentración: 30.3% 🟢</span>
+    </div>
+    <div class="pareto-summary">
+      <div>
+        <div class="pareto-pct">30.3%</div>
+        <div class="pareto-lbl">del revenue del mes viene del Top 10</div>
+      </div>
+      <div style="text-align:right">
+        <div class="pareto-lbl">Total Top 10</div>
+        <div style="font-family:'DM Mono';font-size:16px;font-weight:700;color:var(--warm-dk)">$4.605</div>
+      </div>
+    </div>
+    <table class="pareto-table">
+      <thead><tr><th></th><th>Cliente</th><th style="text-align:right;padding-right:10px">Revenue mes</th><th style="text-align:right;padding-right:10px">Citas</th><th style="text-align:right;padding-right:10px">% total</th></tr></thead>
+      <tbody><tr>
+  <td class="rank">#1</td>
+  <td class="cli-name">Cristina Fienco</td>
+  <td class="num-strong">$550</td>
+  <td class="num">1</td>
+  <td class="num pct">3.6%</td>
+</tr><tr>
+  <td class="rank">#2</td>
+  <td class="cli-name">Lorena Torres</td>
+  <td class="num-strong">$550</td>
+  <td class="num">1</td>
+  <td class="num pct">3.6%</td>
+</tr><tr>
+  <td class="rank">#3</td>
+  <td class="cli-name">Stefania Pereira</td>
+  <td class="num-strong">$500</td>
+  <td class="num">2</td>
+  <td class="num pct">3.3%</td>
+</tr><tr>
+  <td class="rank">#4</td>
+  <td class="cli-name">Kiara Rodriguez</td>
+  <td class="num-strong">$500</td>
+  <td class="num">1</td>
+  <td class="num pct">3.3%</td>
+</tr><tr>
+  <td class="rank">#5</td>
+  <td class="cli-name">Carolina Orellana</td>
+  <td class="num-strong">$460</td>
+  <td class="num">2</td>
+  <td class="num pct">3%</td>
+</tr><tr>
+  <td class="rank">#6</td>
+  <td class="cli-name">Mónica Moretta</td>
+  <td class="num-strong">$435</td>
+  <td class="num">2</td>
+  <td class="num pct">2.9%</td>
+</tr><tr>
+  <td class="rank">#7</td>
+  <td class="cli-name">Lisette Sanunga</td>
+  <td class="num-strong">$420</td>
+  <td class="num">3</td>
+  <td class="num pct">2.8%</td>
+</tr><tr>
+  <td class="rank">#8</td>
+  <td class="cli-name">Elizabeth López</td>
+  <td class="num-strong">$405</td>
+  <td class="num">4</td>
+  <td class="num pct">2.7%</td>
+</tr><tr>
+  <td class="rank">#9</td>
+  <td class="cli-name">Carolina Ibarra</td>
+  <td class="num-strong">$400</td>
+  <td class="num">2</td>
+  <td class="num pct">2.6%</td>
+</tr><tr>
+  <td class="rank">#10</td>
+  <td class="cli-name">Rossana Espinoza</td>
+  <td class="num-strong">$385</td>
+  <td class="num">1</td>
+  <td class="num pct">2.5%</td>
+</tr></tbody>
+    </table>
+    
+  </div>
   <div class="card">
     <div class="card-title">Top 5 tratamientos <span class="badge">Reservas</span></div>
     <div class="svc-row">
@@ -241,6 +591,10 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <span class="svc-rev">$1.050</span>
   </div>
   </div>
+</div>
+
+<!-- Productos + Membresías -->
+<div class="two-col-50">
   <div class="card">
     <div class="card-title">Top 5 productos <span class="badge" style="background:#6b8f71">Venta</span></div>
     <div class="svc-row">
@@ -300,86 +654,311 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   </div>
   </div>
 </div>
+
+<!-- ✅ v7 CHURN ACCIONABLE -->
 <div class="card">
   <div class="card-title">Retención de clientes — Churn 🔴
     <span style="margin-left:auto;font-size:9px;color:var(--mid);font-weight:400">Última actividad = max(caja, reserva)</span>
   </div>
   <div class="churn-summary">
-    <div class="csb r"><div class="csb-num">147</div><div class="csb-lbl">ROJO · +45 días</div></div>
-    <div class="csb a"><div class="csb-num">59</div><div class="csb-lbl">ÁMBAR · 30–44 días</div></div>
-    <div class="csb v"><div class="csb-num">10</div><div class="csb-lbl">Pendientes mes</div></div>
+    <div class="csb r"><div class="csb-num">174</div><div class="csb-lbl">ROJO · +45 días</div></div>
+    <div class="csb a"><div class="csb-num">60</div><div class="csb-lbl">ÁMBAR · 30–44 días</div></div>
+    <div class="csb v"><div class="csb-num">9</div><div class="csb-lbl">Pendientes mes</div></div>
     <div class="csb r" style="background:#fff5f5">
-      <div class="csb-num" style="font-size:20px;color:var(--rojo)">$32.341</div>
+      <div class="csb-num" style="font-size:20px;color:var(--rojo)">$43.516</div>
       <div class="csb-lbl">Revenue en riesgo</div>
     </div>
   </div>
-  <div class="card-title" style="margin-top:4px">Top 10 clientes ROJO — por revenue histórico</div>
-  <table class="churn-table">
-    <thead><tr><th></th><th>Cliente</th><th style="text-align:right;padding-right:10px">Revenue hist.</th><th>Días sin visita</th><th>Teléfono</th></tr></thead>
+
+  <div class="churn-actions">
+    <button class="btn-action" onclick="copyPhones()">📱 Copiar teléfonos Top 10</button>
+    <button class="btn-action outline" onclick="downloadCSV()">⬇️ Descargar CSV Top 30</button>
+    <button class="btn-action outline" onclick="copyTable()">📋 Copiar tabla (WhatsApp)</button>
+  </div>
+
+  <div class="card-title" style="margin-top:4px">Top 30 clientes ROJO — accionable</div>
+  <table class="churn-table" id="churnTable">
+    <thead><tr><th></th><th>Cliente</th><th style="text-align:right;padding-right:10px">Revenue hist.</th><th>Días</th><th>Último servicio</th><th>Esthetician</th><th>Teléfono</th></tr></thead>
     <tbody><tr>
     <td class="rank">#1</td>
-    <td class="cli-name">Jannina Cabal</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$5.922</td>
-    <td><span class="dias-badge" style="background:#c0392b">74d</span></td>
-    <td class="tel">+593994388429</td>
+    <td class="cli-name">Michelle Vargas</td>
+    <td class="num-strong">$8.591</td>
+    <td><span class="dias-badge" style="background:#c0392b">113d</span></td>
+    <td class="serv-cell">—</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+992472086</td>
   </tr><tr>
     <td class="rank">#2</td>
-    <td class="cli-name">Julia Villares</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$5.782</td>
-    <td><span class="dias-badge" style="background:#c0392b">85d</span></td>
-    <td class="tel">+986022465</td>
+    <td class="cli-name">Martha Mata</td>
+    <td class="num-strong">$6.146</td>
+    <td><span class="dias-badge" style="background:#c0392b">116d</span></td>
+    <td class="serv-cell">Contorno de Labios</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+380989939353</td>
   </tr><tr>
     <td class="rank">#3</td>
-    <td class="cli-name">Erika Garaicoa</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$4.449</td>
-    <td><span class="dias-badge" style="background:#c0392b">83d</span></td>
-    <td class="tel">+593980236493</td>
+    <td class="cli-name">Jannina Cabal</td>
+    <td class="num-strong">$5.922</td>
+    <td><span class="dias-badge" style="background:#c0392b">74d</span></td>
+    <td class="serv-cell">Exosomas + Tecnología Avanza</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593994388429</td>
   </tr><tr>
     <td class="rank">#4</td>
-    <td class="cli-name">Michelle Swett</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$3.466</td>
-    <td><span class="dias-badge" style="background:#e67e22">51d</span></td>
-    <td class="tel">+593997075064</td>
+    <td class="cli-name">Julia Villares</td>
+    <td class="num-strong">$5.782</td>
+    <td><span class="dias-badge" style="background:#c0392b">86d</span></td>
+    <td class="serv-cell">Intensif Estrías</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+986022465</td>
   </tr><tr>
     <td class="rank">#5</td>
-    <td class="cli-name">Lily Cueva</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$2.612</td>
-    <td><span class="dias-badge" style="background:#d4860a">47d</span></td>
-    <td class="tel">+983454605</td>
+    <td class="cli-name">Erika Garaicoa</td>
+    <td class="num-strong">$4.449</td>
+    <td><span class="dias-badge" style="background:#c0392b">83d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593980236493</td>
   </tr><tr>
     <td class="rank">#6</td>
-    <td class="cli-name">Karla Pesantez</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$2.217</td>
-    <td><span class="dias-badge" style="background:#c0392b">85d</span></td>
-    <td class="tel">+991486665</td>
+    <td class="cli-name">Michelle Swett</td>
+    <td class="num-strong">$3.466</td>
+    <td><span class="dias-badge" style="background:#e67e22">51d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593997075064</td>
   </tr><tr>
     <td class="rank">#7</td>
-    <td class="cli-name">Maria Isabel Petrinic</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$2.213</td>
-    <td><span class="dias-badge" style="background:#c0392b">105d</span></td>
-    <td class="tel">+12016604506</td>
+    <td class="cli-name">Lily Cueva</td>
+    <td class="num-strong">$2.612</td>
+    <td><span class="dias-badge" style="background:#d4860a">47d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+983454605</td>
   </tr><tr>
     <td class="rank">#8</td>
-    <td class="cli-name">Denise Sanabria</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$1.952</td>
-    <td><span class="dias-badge" style="background:#d4860a">49d</span></td>
-    <td class="tel">+593993356804</td>
+    <td class="cli-name">Karla Pesantez</td>
+    <td class="num-strong">$2.217</td>
+    <td><span class="dias-badge" style="background:#c0392b">85d</span></td>
+    <td class="serv-cell">Skin Booster AH</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+991486665</td>
   </tr><tr>
     <td class="rank">#9</td>
-    <td class="cli-name">Raquel Del Valle</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$1.908</td>
-    <td><span class="dias-badge" style="background:#d4860a">47d</span></td>
-    <td class="tel">+991516910</td>
+    <td class="cli-name">Maria Isabel Petrinic</td>
+    <td class="num-strong">$2.213</td>
+    <td><span class="dias-badge" style="background:#c0392b">106d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+12016604506</td>
   </tr><tr>
     <td class="rank">#10</td>
+    <td class="cli-name">Gisella Ledesma</td>
+    <td class="num-strong">$2.118</td>
+    <td><span class="dias-badge" style="background:#c0392b">121d</span></td>
+    <td class="serv-cell">Kim K Korean Facial</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+999572251</td>
+  </tr><tr>
+    <td class="rank">#11</td>
+    <td class="cli-name">Denise Sanabria</td>
+    <td class="num-strong">$1.952</td>
+    <td><span class="dias-badge" style="background:#d4860a">49d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593993356804</td>
+  </tr><tr>
+    <td class="rank">#12</td>
+    <td class="cli-name">Raquel Del Valle</td>
+    <td class="num-strong">$1.908</td>
+    <td><span class="dias-badge" style="background:#d4860a">48d</span></td>
+    <td class="serv-cell">Teens Facial</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+991516910</td>
+  </tr><tr>
+    <td class="rank">#13</td>
+    <td class="cli-name">Ximena Decker</td>
+    <td class="num-strong">$1.882</td>
+    <td><span class="dias-badge" style="background:#c0392b">110d</span></td>
+    <td class="serv-cell">Glacial Gloss</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+983860976</td>
+  </tr><tr>
+    <td class="rank">#14</td>
     <td class="cli-name">Walleska Bajaña</td>
-    <td class="num" style="color:#a8864a;font-weight:700">$1.820</td>
+    <td class="num-strong">$1.820</td>
     <td><span class="dias-badge" style="background:#c0392b">65d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Milena</td>
     <td class="tel">+593983491620</td>
+  </tr><tr>
+    <td class="rank">#15</td>
+    <td class="cli-name">Milena Tettamanti</td>
+    <td class="num-strong">$1.775</td>
+    <td><span class="dias-badge" style="background:#e67e22">55d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+985200794</td>
+  </tr><tr>
+    <td class="rank">#16</td>
+    <td class="cli-name">Oriana Abreu</td>
+    <td class="num-strong">$1.767</td>
+    <td><span class="dias-badge" style="background:#e67e22">51d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+981650376</td>
+  </tr><tr>
+    <td class="rank">#17</td>
+    <td class="cli-name">Carolina Salcedo</td>
+    <td class="num-strong">$1.734</td>
+    <td><span class="dias-badge" style="background:#c0392b">120d</span></td>
+    <td class="serv-cell">Glacial Glide</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+380985449799</td>
+  </tr><tr>
+    <td class="rank">#18</td>
+    <td class="cli-name">Arianna Ortega</td>
+    <td class="num-strong">$1.490</td>
+    <td><span class="dias-badge" style="background:#c0392b">72d</span></td>
+    <td class="serv-cell">Glacial Gloss</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593994500233</td>
+  </tr><tr>
+    <td class="rank">#19</td>
+    <td class="cli-name">Alberto Rosado</td>
+    <td class="num-strong">$1.410</td>
+    <td><span class="dias-badge" style="background:#c0392b">69d</span></td>
+    <td class="serv-cell">SkinPen + Exosomas</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593983340243</td>
+  </tr><tr>
+    <td class="rank">#20</td>
+    <td class="cli-name">Karla Scippa</td>
+    <td class="num-strong">$1.400</td>
+    <td><span class="dias-badge" style="background:#c0392b">76d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593995237981</td>
+  </tr><tr>
+    <td class="rank">#21</td>
+    <td class="cli-name">Stefania Goncalves</td>
+    <td class="num-strong">$1.393</td>
+    <td><span class="dias-badge" style="background:#c0392b">64d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+992200465</td>
+  </tr><tr>
+    <td class="rank">#22</td>
+    <td class="cli-name">Claudia Bolona</td>
+    <td class="num-strong">$1.365</td>
+    <td><span class="dias-badge" style="background:#c0392b">67d</span></td>
+    <td class="serv-cell">Face Massage</td>
+    <td class="esth-cell">Karla</td>
+    <td class="tel">+593994347151</td>
+  </tr><tr>
+    <td class="rank">#23</td>
+    <td class="cli-name">Stephanie Castillo</td>
+    <td class="num-strong">$1.349</td>
+    <td><span class="dias-badge" style="background:#c0392b">82d</span></td>
+    <td class="serv-cell">Glacial Gloss</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+992059753</td>
+  </tr><tr>
+    <td class="rank">#24</td>
+    <td class="cli-name">Stefania Franco</td>
+    <td class="num-strong">$1.340</td>
+    <td><span class="dias-badge" style="background:#c0392b">63d</span></td>
+    <td class="serv-cell">—</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+993020253</td>
+  </tr><tr>
+    <td class="rank">#25</td>
+    <td class="cli-name">Gina Peña</td>
+    <td class="num-strong">$1.226</td>
+    <td><span class="dias-badge" style="background:#e67e22">51d</span></td>
+    <td class="serv-cell">Microneedling con PDRN</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593958921573</td>
+  </tr><tr>
+    <td class="rank">#26</td>
+    <td class="cli-name">Grace Cassis</td>
+    <td class="num-strong">$1.220</td>
+    <td><span class="dias-badge" style="background:#e67e22">57d</span></td>
+    <td class="serv-cell">Kim K Korean Facial</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593997050412</td>
+  </tr><tr>
+    <td class="rank">#27</td>
+    <td class="cli-name">Kristty Gil</td>
+    <td class="num-strong">$1.185</td>
+    <td><span class="dias-badge" style="background:#c0392b">116d</span></td>
+    <td class="serv-cell">Peel Manchas</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593991318888</td>
+  </tr><tr>
+    <td class="rank">#28</td>
+    <td class="cli-name">Domenica Villavicencio</td>
+    <td class="num-strong">$1.110</td>
+    <td><span class="dias-badge" style="background:#c0392b">114d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593939240096</td>
+  </tr><tr>
+    <td class="rank">#29</td>
+    <td class="cli-name">Yamara Cordova</td>
+    <td class="num-strong">$1.107</td>
+    <td><span class="dias-badge" style="background:#c0392b">98d</span></td>
+    <td class="serv-cell">Valentine´s Facial</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593993914737</td>
+  </tr><tr>
+    <td class="rank">#30</td>
+    <td class="cli-name">Rossana Romero</td>
+    <td class="num-strong">$1.063</td>
+    <td><span class="dias-badge" style="background:#e67e22">58d</span></td>
+    <td class="serv-cell">Kim K Korean Facial</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593986421196</td>
   </tr></tbody>
   </table>
   <div class="churn-nota">⚠️ <strong>Metodología:</strong> última actividad = max(última transacción en caja, última reserva asistida). Clientes con paquetes prepagados no se marcan ROJO mientras tengan reservas recientes.</div>
 </div>
+
 </div>
-<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 20 may 2026 · Datos: Altegio API · 7:30 AM ECT</div>
+<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 21 may 2026 · Datos: Altegio API · 7:30 AM ECT · v7</div>
+
+<!-- Hidden data for copy/export actions -->
+<script type="application/json" id="churnData">[{"nombre":"Michelle Vargas","dias":113,"revenue_hist":8591,"tel":"+992472086","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Martha Mata","dias":116,"revenue_hist":6146,"tel":"+380989939353","ultServicio":"Contorno de Labios","ultEsth":"Carla"},{"nombre":"Jannina Cabal","dias":74,"revenue_hist":5922,"tel":"+593994388429","ultServicio":"Exosomas + Tecnología Avanzada","ultEsth":"Carla"},{"nombre":"Julia Villares","dias":86,"revenue_hist":5782,"tel":"+986022465","ultServicio":"Intensif Estrías","ultEsth":"Carla"},{"nombre":"Erika Garaicoa","dias":83,"revenue_hist":4449,"tel":"+593980236493","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Michelle Swett","dias":51,"revenue_hist":3466,"tel":"+593997075064","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Lily Cueva","dias":47,"revenue_hist":2612,"tel":"+983454605","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Karla Pesantez","dias":85,"revenue_hist":2217,"tel":"+991486665","ultServicio":"Skin Booster AH","ultEsth":"Carla"},{"nombre":"Maria Isabel Petrinic","dias":106,"revenue_hist":2213,"tel":"+12016604506","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Gisella Ledesma","dias":121,"revenue_hist":2118,"tel":"+999572251","ultServicio":"Kim K Korean Facial","ultEsth":"Carla"},{"nombre":"Denise Sanabria","dias":49,"revenue_hist":1952,"tel":"+593993356804","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Raquel Del Valle","dias":48,"revenue_hist":1908,"tel":"+991516910","ultServicio":"Teens Facial","ultEsth":"Milena"},{"nombre":"Ximena Decker","dias":110,"revenue_hist":1882,"tel":"+983860976","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Walleska Bajaña","dias":65,"revenue_hist":1820,"tel":"+593983491620","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Milena Tettamanti","dias":55,"revenue_hist":1775,"tel":"+985200794","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Oriana Abreu","dias":51,"revenue_hist":1767,"tel":"+981650376","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Carolina Salcedo","dias":120,"revenue_hist":1734,"tel":"+380985449799","ultServicio":"Glacial Glide","ultEsth":"Carla"},{"nombre":"Arianna Ortega","dias":72,"revenue_hist":1490,"tel":"+593994500233","ultServicio":"Glacial Gloss","ultEsth":"Carla"},{"nombre":"Alberto Rosado","dias":69,"revenue_hist":1410,"tel":"+593983340243","ultServicio":"SkinPen + Exosomas","ultEsth":"Carla"},{"nombre":"Karla Scippa","dias":76,"revenue_hist":1400,"tel":"+593995237981","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Stefania Goncalves","dias":64,"revenue_hist":1393,"tel":"+992200465","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Claudia Bolona","dias":67,"revenue_hist":1365,"tel":"+593994347151","ultServicio":"Face Massage","ultEsth":"Karla"},{"nombre":"Stephanie Castillo","dias":82,"revenue_hist":1349,"tel":"+992059753","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Stefania Franco","dias":63,"revenue_hist":1340,"tel":"+993020253","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Gina Peña","dias":51,"revenue_hist":1226,"tel":"+593958921573","ultServicio":"Microneedling con PDRN","ultEsth":"Milena"},{"nombre":"Grace Cassis","dias":57,"revenue_hist":1220,"tel":"+593997050412","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"},{"nombre":"Kristty Gil","dias":116,"revenue_hist":1185,"tel":"+593991318888","ultServicio":"Peel Manchas","ultEsth":"Milena"},{"nombre":"Domenica Villavicencio","dias":114,"revenue_hist":1110,"tel":"+593939240096","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Yamara Cordova","dias":98,"revenue_hist":1107,"tel":"+593993914737","ultServicio":"Valentine´s Facial","ultEsth":"Milena"},{"nombre":"Rossana Romero","dias":58,"revenue_hist":1063,"tel":"+593986421196","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"}]</script>
+
+<script>
+function copyPhones(){
+  try {
+    const data = JSON.parse(document.getElementById('churnData').textContent);
+    const top10 = data.slice(0, 10).map(c => c.tel).filter(t => t && t !== '—').join('\n');
+    navigator.clipboard.writeText(top10).then(() => alert('✓ ' + data.slice(0,10).length + ' teléfonos copiados al portapapeles'));
+  } catch(e) { alert('Error: ' + e.message); }
+}
+function downloadCSV(){
+  try {
+    const data = JSON.parse(document.getElementById('churnData').textContent);
+    const headers = ['Cliente','Revenue histórico','Días sin venir','Último servicio','Esthetician','Teléfono'];
+    const rows = data.map(c => [c.nombre, c.revenue_hist, c.dias, c.ultServicio, c.ultEsth, c.tel].map(v => '"' + String(v || '').replace(/"/g,'""') + '"').join(','));
+    const csv = '\uFEFF' + headers.map(h => '"' + h + '"').join(',') + '\n' + rows.join('\n');
+    const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'CIST_churn_' + new Date().toISOString().substring(0,10) + '.csv';
+    a.click();
+  } catch(e) { alert('Error: ' + e.message); }
+}
+function copyTable(){
+  try {
+    const data = JSON.parse(document.getElementById('churnData').textContent);
+    const text = '*CIST · Top 30 clientes ROJO*\n\n' + data.map((c,i) =>
+      (i+1) + '. ' + c.nombre + '\n   $' + c.revenue_hist + ' · ' + c.dias + 'd · ' + c.ultServicio + ' (' + c.ultEsth + ')\n   📱 ' + c.tel
+    ).join('\n\n');
+    navigator.clipboard.writeText(text).then(() => alert('✓ Tabla copiada (formato WhatsApp)'));
+  } catch(e) { alert('Error: ' + e.message); }
+}
+</script>
 </body></html>
