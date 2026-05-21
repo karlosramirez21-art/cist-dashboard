@@ -229,6 +229,98 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 
 .footer{text-align:center;padding:16px 28px;font-size:9px;color:var(--mid);border-top:1px solid var(--sand);margin-top:6px;letter-spacing:.05em}
 
+/* ✅ v7.5 Acordeones de sección */
+.section-acc{background:white;border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,.06);overflow:hidden}
+.section-acc summary{padding:16px 22px;cursor:pointer;list-style:none;user-select:none;display:flex;align-items:center;gap:14px;transition:background .15s;border-left:4px solid var(--warm)}
+.section-acc summary::-webkit-details-marker{display:none}
+.section-acc summary:hover{background:var(--cream)}
+.section-acc[open] summary{background:var(--cream);border-bottom:1px solid var(--sand)}
+.sec-icon{font-size:18px;flex-shrink:0}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:var(--dark);flex-shrink:0}
+.sec-sub{font-size:10px;color:var(--mid);letter-spacing:.04em;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sec-arrow{font-size:14px;color:var(--warm);transition:transform .2s;flex-shrink:0}
+.section-acc[open] .sec-arrow{transform:rotate(180deg)}
+.sec-body{padding:18px 22px 22px;background:white}
+@media(max-width:600px){
+  .section-acc summary{padding:14px 14px}
+  .sec-title{font-size:15px}
+  .sec-sub{display:none}
+  .sec-body{padding:14px 14px 16px}
+}
+
+/* ✅ v7.5 MoM table */
+.mom-table{width:100%;border-collapse:collapse;font-size:11px}
+.mom-table th{text-align:left;color:var(--mid);font-weight:600;font-size:9px;letter-spacing:.05em;padding:6px 10px 8px;border-bottom:1px solid var(--sand)}
+.mom-table td{padding:9px 10px;border-bottom:1px dashed #f0ebe3;vertical-align:middle}
+.mom-table tr:last-child td{border-bottom:none}
+.mom-table .mom-lbl{font-weight:600;font-size:11px;color:var(--dark)}
+.mom-table .th-r{text-align:right!important}
+.mom-table .num-strong{text-align:right;font-family:'DM Mono';font-size:12px;font-weight:700;color:var(--dark)}
+.mom-table .num{text-align:right;font-family:'DM Mono';font-size:11px;color:var(--mid)}
+.mom-delta{text-align:right;font-family:'DM Mono';font-size:11px;font-weight:700;padding-right:10px}
+.mom-delta.up{color:var(--verde)}
+.mom-delta.down{color:var(--rojo)}
+.mom-delta.flat{color:var(--mid)}
+
+/* ✅ v7.5 Frecuencia entre visitas */
+.ret-block{margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--sand)}
+.ret-block:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+.ret-hero{display:flex;align-items:center;gap:18px;padding:12px 14px;background:var(--cream);border-radius:10px;margin:8px 0 12px}
+.ret-hero-num{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;line-height:1;min-width:80px;text-align:center}
+.ret-hero-num.verde{color:var(--verde)}
+.ret-hero-num.ambar{color:var(--ambar)}
+.ret-hero-num.rojo{color:var(--rojo)}
+.ret-hero-lbl{font-size:11px;color:var(--dark);font-weight:600;line-height:1.5}
+.frec-distrib{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.frec-row{display:grid;grid-template-columns:60px 1fr 100px;gap:10px;align-items:center;font-size:10px}
+.frec-lbl{font-family:'DM Mono';color:var(--mid);font-weight:700;font-size:10px}
+.frec-bar-wrap{background:var(--sand);border-radius:10px;height:9px;overflow:hidden}
+.frec-bar{background:linear-gradient(90deg,var(--warm-dk),var(--warm));height:100%;border-radius:10px}
+.frec-num{font-family:'DM Mono';font-size:10px;color:var(--dark);font-weight:700;text-align:right}
+
+/* ✅ v7.5 Heatmap horario — TRANSPUESTO v7.6: horas en filas, días en columnas */
+.heatmap-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+.heatmap-table{width:100%;border-collapse:separate;border-spacing:4px;font-size:10px;min-width:340px}
+.heatmap-table th{font-size:10px;color:var(--dark);font-weight:700;letter-spacing:.04em;padding:6px 4px;text-align:center}
+.heatmap-table th.heat-h{min-width:46px;background:var(--cream);border-radius:6px}
+.heatmap-table th.heat-h-corner{width:50px;background:transparent}
+.heatmap-table .heat-day{font-size:11px;font-weight:700;color:var(--dark);text-align:right;padding:8px 10px 8px 4px;width:50px;font-family:'DM Mono'}
+.heat-cell{padding:14px 6px;border-radius:6px;text-align:center;font-family:'DM Mono';font-size:10px;font-weight:700;color:var(--dark);min-width:46px}
+.heat-cell.h0{background:#f5f1ea;color:#bbb}
+.heat-cell.h1{background:#fef6e6;color:#a8864a}
+.heat-cell.h2{background:#fce4b8;color:#7a5a20}
+.heat-cell.h3{background:#f0b070;color:white}
+.heat-cell.h4{background:#c0392b;color:white}
+.heatmap-legend{display:flex;align-items:center;gap:6px;margin-top:10px;justify-content:center;font-size:9px;color:var(--mid)}
+.hl{color:var(--mid);font-size:9px}
+.hbox{display:inline-block;width:18px;height:12px;border-radius:3px}
+.hbox.h0{background:#f5f1ea}.hbox.h1{background:#fef6e6}.hbox.h2{background:#fce4b8}.hbox.h3{background:#f0b070}.hbox.h4{background:#c0392b}
+
+/* ✅ v7.5 Cohort table */
+.cohort-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px}
+.cohort-table{width:100%;border-collapse:separate;border-spacing:3px;font-size:10px;min-width:520px}
+.cohort-table th{font-size:9px;color:var(--mid);font-weight:600;letter-spacing:.04em;padding:4px;text-align:center;font-family:'DM Mono'}
+.cohort-table .cohort-h{min-width:48px}
+.cohort-table .cohort-lbl{font-size:10px;font-weight:700;color:var(--dark);text-align:left;padding-right:8px;width:60px;text-transform:capitalize}
+.cohort-table .num{font-family:'DM Mono';font-size:10px;color:var(--mid);text-align:center;padding:0 4px}
+.cohort-cell{padding:8px 6px;border-radius:6px;text-align:center;font-family:'DM Mono';font-size:9px;font-weight:700;min-width:48px}
+.cohort-cell.empty{background:transparent}
+.cohort-cell.c0{background:#fdecea;color:var(--rojo)}
+.cohort-cell.c1{background:#fef6e6;color:#a8864a}
+.cohort-cell.c2{background:#fce4b8;color:#7a5a20}
+.cohort-cell.c3{background:#cfe8d7;color:#2d7a4f}
+.cohort-cell.c4{background:#a0d4b8;color:white}
+
+/* ✅ v7.5 No-show grid */
+.noshow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:600px){.noshow-grid{grid-template-columns:1fr}}
+.noshow-grid .csb{padding:14px 12px}
+.ns-cost{font-size:9px;color:var(--mid);margin-top:6px;font-family:'DM Mono'}
+
+/* ✅ v7.5 Churn table wrap mobile */
+.churn-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.churn-table-wrap .churn-table{min-width:600px}
+
 /* Hidden CSV/Telefonos data for copy */
 .hidden-data{display:none}
 </style>
@@ -248,7 +340,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   <span>📅 Quedan <strong>8</strong> días hábiles</span><span>·</span>
   <span>Pendientes: <strong>9</strong></span><span>·</span>
   <span>Proyección: <strong>$21.977</strong> 🟡</span><span>·</span>
-  <span>Revenue en riesgo: <strong>$43.516</strong> 🔴</span>
+  <span>Revenue en riesgo: <strong>$47.889</strong> 🔴</span>
 </div>
 <div class="main">
 
@@ -317,9 +409,9 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   <div class="kpi-card verde">
     <div class="kpi-sem">🟢</div>
     <div class="kpi-label">Conversión 1ª→2ª (60d)</div>
-    <div class="kpi-val">56.4%</div>
-    <div class="kpi-sub">Cohorte: 250 clientas</div>
-    <div class="kpi-proy">141 volvieron</div>
+    <div class="kpi-val">53.6%</div>
+    <div class="kpi-sub">Cohorte: 222 clientas</div>
+    <div class="kpi-proy">119 volvieron</div>
   </div>
   <div class="kpi-card ambar">
     <div class="kpi-label">Cancelación</div>
@@ -334,13 +426,62 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   </div>
 </div>
 
-<!-- ✅ v7 EQUIPO - scorecard expandido con drill-down -->
-<div class="card">
-  <div class="card-title">Equipo — Scorecard del mes
-    <span class="badge" style="margin-left:auto">4 esteticistas</span>
-    <span style="font-size:9px;color:var(--mid);font-weight:400;margin-left:8px">Haz click para ver detalle</span>
-  </div>
-  <details class="esth-card">
+<!-- ═══ ACORDEONES DE SECCIÓN ═══ -->
+
+<!-- 📈 Comparativo MoM -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">📈</span>
+    <span class="sec-title">Comparativo Mes-a-Mes</span>
+    <span class="sec-sub">vs abril (mismo período)</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body"><table class="mom-table">
+  <thead><tr><th>KPI</th><th class="th-r">Actual</th><th class="th-r">abril (a igual día)</th><th class="th-r">Δ</th></tr></thead>
+  <tbody>
+    <tr>
+    <td class="mom-lbl">Revenue cobrado</td>
+    <td class="num-strong">$15.215</td>
+    <td class="num">$17.953</td>
+    <td class="mom-delta down">▼ 15.3%</td>
+  </tr>
+    <tr>
+    <td class="mom-lbl">Citas atendidas</td>
+    <td class="num-strong">149</td>
+    <td class="num">156</td>
+    <td class="mom-delta down">▼ 4.5%</td>
+  </tr>
+    <tr>
+    <td class="mom-lbl">Ticket promedio</td>
+    <td class="num-strong">$102</td>
+    <td class="num">$115</td>
+    <td class="mom-delta down">▼ 11.3%</td>
+  </tr>
+    <tr>
+    <td class="mom-lbl">Ocupación</td>
+    <td class="num-strong">55,2%</td>
+    <td class="num">57,8%</td>
+    <td class="mom-delta down">▼ 4.5%</td>
+  </tr>
+    <tr>
+    <td class="mom-lbl">% Cancelación</td>
+    <td class="num-strong">10,2%</td>
+    <td class="num">1,3%</td>
+    <td class="mom-delta up">▲ 684.6%</td>
+  </tr>
+  </tbody>
+</table></div>
+</details>
+
+<!-- 👥 Equipo · Scorecard -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">👥</span>
+    <span class="sec-title">Equipo · Scorecard del mes</span>
+    <span class="sec-sub">4 esteticistas · click para detalle individual</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body"><details class="esth-card">
     <summary>
       <div class="esth-head">
         <div>
@@ -377,7 +518,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km rojo"><div class="km-l">Cancelación</div><div class="km-v">12.1%</div></div>
         <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0.7%</div></div>
         <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">42.7%</div></div>
-        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">56.1%</div></div>
+        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">53.4%</div></div>
+        <div class="km ambar"><div class="km-l">Conv. → Paquete</div><div class="km-v">14.2%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">48</div></div>
       </div>
 
@@ -388,20 +530,20 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         </div>
         <div class="loyalty-grid">
           <div class="loyalty-card excl">
-            <div class="lc-num">28</div>
-            <div class="lc-pct">58%</div>
+            <div class="lc-num">25</div>
+            <div class="lc-pct">52%</div>
             <div class="lc-lbl">Exclusivas</div>
             <div class="lc-desc">100% con ella</div>
           </div>
           <div class="loyalty-card leal">
-            <div class="lc-num">2</div>
-            <div class="lc-pct">4%</div>
+            <div class="lc-num">3</div>
+            <div class="lc-pct">6%</div>
             <div class="lc-lbl">Leales</div>
             <div class="lc-desc">70-99% con ella</div>
           </div>
           <div class="loyalty-card comp">
-            <div class="lc-num">15</div>
-            <div class="lc-pct">31%</div>
+            <div class="lc-num">17</div>
+            <div class="lc-pct">35%</div>
             <div class="lc-lbl">Compartidas</div>
             <div class="lc-desc">30-69% con ella</div>
           </div>
@@ -441,7 +583,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="td-r num-strong">5</td>
               <td class="td-r num">10</td>
               <td class="td-r pct">50%</td>
-              <td class="td-r num">2d</td>
+              <td class="td-r num">3d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
               <td class="rank">#3</td>
@@ -453,6 +595,14 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
               <td class="rank">#4</td>
+              <td class="cli-name">Maria Cristina Sanabria</td>
+              <td class="td-r num-strong">4</td>
+              <td class="td-r num">6</td>
+              <td class="td-r pct">67%</td>
+              <td class="td-r num">4d</td>
+              <td class="td-c"><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#5</td>
               <td class="cli-name">Yemima Moncayo</td>
               <td class="td-r num-strong">4</td>
               <td class="td-r num">4</td>
@@ -460,7 +610,15 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="td-r num">5d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
-              <td class="rank">#5</td>
+              <td class="rank">#6</td>
+              <td class="cli-name">Karina Luces</td>
+              <td class="td-r num-strong">4</td>
+              <td class="td-r num">9</td>
+              <td class="td-r pct">44%</td>
+              <td class="td-r num">6d</td>
+              <td class="td-c"><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#7</td>
               <td class="cli-name">Isabela Alarcon</td>
               <td class="td-r num-strong">4</td>
               <td class="td-r num">4</td>
@@ -468,15 +626,15 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="td-r num">7d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
-              <td class="rank">#6</td>
+              <td class="rank">#8</td>
               <td class="cli-name">Veronica Carrion</td>
               <td class="td-r num-strong">4</td>
-              <td class="td-r num">4</td>
-              <td class="td-r pct">100%</td>
+              <td class="td-r num">5</td>
+              <td class="td-r pct">80%</td>
               <td class="td-r num">7d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
-              <td class="rank">#7</td>
+              <td class="rank">#9</td>
               <td class="cli-name">Yanela Zambrano</td>
               <td class="td-r num-strong">4</td>
               <td class="td-r num">4</td>
@@ -484,28 +642,12 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="td-r num">12d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
-              <td class="rank">#8</td>
+              <td class="rank">#10</td>
               <td class="cli-name">Andrea Hurel</td>
               <td class="td-r num-strong">4</td>
               <td class="td-r num">7</td>
               <td class="td-r pct">57%</td>
               <td class="td-r num">15d</td>
-              <td class="td-c"><span class="estado-dot verde"></span></td>
-            </tr><tr>
-              <td class="rank">#9</td>
-              <td class="cli-name">Carolina Ibarra</td>
-              <td class="td-r num-strong">3</td>
-              <td class="td-r num">4</td>
-              <td class="td-r pct">75%</td>
-              <td class="td-r num">2d</td>
-              <td class="td-c"><span class="estado-dot verde"></span></td>
-            </tr><tr>
-              <td class="rank">#10</td>
-              <td class="cli-name">Karla Alban</td>
-              <td class="td-r num-strong">3</td>
-              <td class="td-r num">4</td>
-              <td class="td-r pct">75%</td>
-              <td class="td-r num">3d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr></tbody>
           </table></div>
@@ -553,7 +695,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">7.1%</div></div>
         <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0.4%</div></div>
         <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">67.1%</div></div>
-        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">68.9%</div></div>
+        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">66.7%</div></div>
+        <div class="km ambar"><div class="km-l">Conv. → Paquete</div><div class="km-v">12.1%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">36</div></div>
       </div>
 
@@ -564,26 +707,26 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         </div>
         <div class="loyalty-grid">
           <div class="loyalty-card excl">
-            <div class="lc-num">15</div>
-            <div class="lc-pct">42%</div>
+            <div class="lc-num">14</div>
+            <div class="lc-pct">39%</div>
             <div class="lc-lbl">Exclusivas</div>
             <div class="lc-desc">100% con ella</div>
           </div>
           <div class="loyalty-card leal">
-            <div class="lc-num">3</div>
-            <div class="lc-pct">8%</div>
+            <div class="lc-num">1</div>
+            <div class="lc-pct">3%</div>
             <div class="lc-lbl">Leales</div>
             <div class="lc-desc">70-99% con ella</div>
           </div>
           <div class="loyalty-card comp">
-            <div class="lc-num">16</div>
-            <div class="lc-pct">44%</div>
+            <div class="lc-num">17</div>
+            <div class="lc-pct">47%</div>
             <div class="lc-lbl">Compartidas</div>
             <div class="lc-desc">30-69% con ella</div>
           </div>
           <div class="loyalty-card prest">
-            <div class="lc-num">2</div>
-            <div class="lc-pct">6%</div>
+            <div class="lc-num">4</div>
+            <div class="lc-pct">11%</div>
             <div class="lc-lbl">Prestadas</div>
             <div class="lc-desc">&lt;30% con ella</div>
           </div>
@@ -615,8 +758,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="rank">#2</td>
               <td class="cli-name">Maria Jose Villacis</td>
               <td class="td-r num-strong">6</td>
-              <td class="td-r num">8</td>
-              <td class="td-r pct">75%</td>
+              <td class="td-r num">9</td>
+              <td class="td-r pct">67%</td>
               <td class="td-r num">13d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
@@ -671,8 +814,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="rank">#9</td>
               <td class="cli-name">Bertha Rosero</td>
               <td class="td-r num-strong">3</td>
-              <td class="td-r num">4</td>
-              <td class="td-r pct">75%</td>
+              <td class="td-r num">5</td>
+              <td class="td-r pct">60%</td>
               <td class="td-r num">14d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
@@ -729,7 +872,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">8.7%</div></div>
         <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0%</div></div>
         <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">25.7%</div></div>
-        <div class="km ambar"><div class="km-l">Retención 1ª</div><div class="km-v">48.4%</div></div>
+        <div class="km ambar"><div class="km-l">Retención 1ª</div><div class="km-v">47.6%</div></div>
+        <div class="km rojo"><div class="km-l">Conv. → Paquete</div><div class="km-v">2.5%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">21</div></div>
       </div>
 
@@ -740,20 +884,20 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         </div>
         <div class="loyalty-grid">
           <div class="loyalty-card excl">
-            <div class="lc-num">11</div>
-            <div class="lc-pct">52%</div>
+            <div class="lc-num">10</div>
+            <div class="lc-pct">48%</div>
             <div class="lc-lbl">Exclusivas</div>
             <div class="lc-desc">100% con ella</div>
           </div>
           <div class="loyalty-card leal">
-            <div class="lc-num">1</div>
-            <div class="lc-pct">5%</div>
+            <div class="lc-num">3</div>
+            <div class="lc-pct">14%</div>
             <div class="lc-lbl">Leales</div>
             <div class="lc-desc">70-99% con ella</div>
           </div>
           <div class="loyalty-card comp">
-            <div class="lc-num">8</div>
-            <div class="lc-pct">38%</div>
+            <div class="lc-num">7</div>
+            <div class="lc-pct">33%</div>
             <div class="lc-lbl">Compartidas</div>
             <div class="lc-desc">30-69% con ella</div>
           </div>
@@ -791,12 +935,20 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="rank">#2</td>
               <td class="cli-name">Elvira Dominguez</td>
               <td class="td-r num-strong">4</td>
-              <td class="td-r num">4</td>
-              <td class="td-r pct">100%</td>
+              <td class="td-r num">5</td>
+              <td class="td-r pct">80%</td>
               <td class="td-r num">7d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
               <td class="rank">#3</td>
+              <td class="cli-name">Nancy Alvarez</td>
+              <td class="td-r num-strong">3</td>
+              <td class="td-r num">4</td>
+              <td class="td-r pct">75%</td>
+              <td class="td-r num">5d</td>
+              <td class="td-c"><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#4</td>
               <td class="cli-name">Samantha Sánchez</td>
               <td class="td-r num-strong">3</td>
               <td class="td-r num">3</td>
@@ -804,20 +956,12 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="td-r num">6d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
-              <td class="rank">#4</td>
+              <td class="rank">#5</td>
               <td class="cli-name">María Fernanda Hidalgo</td>
               <td class="td-r num-strong">3</td>
               <td class="td-r num">4</td>
               <td class="td-r pct">75%</td>
               <td class="td-r num">9d</td>
-              <td class="td-c"><span class="estado-dot verde"></span></td>
-            </tr><tr>
-              <td class="rank">#5</td>
-              <td class="cli-name">Nancy Alvarez</td>
-              <td class="td-r num-strong">2</td>
-              <td class="td-r num">3</td>
-              <td class="td-r pct">67%</td>
-              <td class="td-r num">5d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
               <td class="rank">#6</td>
@@ -905,7 +1049,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">11.6%</div></div>
         <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0%</div></div>
         <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">50.1%</div></div>
-        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">63%</div></div>
+        <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">57.5%</div></div>
+        <div class="km rojo"><div class="km-l">Conv. → Paquete</div><div class="km-v">7.6%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">35</div></div>
       </div>
 
@@ -928,14 +1073,14 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
             <div class="lc-desc">70-99% con ella</div>
           </div>
           <div class="loyalty-card comp">
-            <div class="lc-num">11</div>
-            <div class="lc-pct">31%</div>
+            <div class="lc-num">10</div>
+            <div class="lc-pct">29%</div>
             <div class="lc-lbl">Compartidas</div>
             <div class="lc-desc">30-69% con ella</div>
           </div>
           <div class="loyalty-card prest">
-            <div class="lc-num">8</div>
-            <div class="lc-pct">23%</div>
+            <div class="lc-num">9</div>
+            <div class="lc-pct">26%</div>
             <div class="lc-lbl">Prestadas</div>
             <div class="lc-desc">&lt;30% con ella</div>
           </div>
@@ -958,9 +1103,9 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
             <tbody><tr>
               <td class="rank">#1</td>
               <td class="cli-name">Karla Molina</td>
-              <td class="td-r num-strong">6</td>
-              <td class="td-r num">7</td>
-              <td class="td-r pct">86%</td>
+              <td class="td-r num-strong">7</td>
+              <td class="td-r num">8</td>
+              <td class="td-r pct">88%</td>
               <td class="td-r num">13d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
@@ -969,7 +1114,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="td-r num-strong">5</td>
               <td class="td-r num">6</td>
               <td class="td-r pct">83%</td>
-              <td class="td-r num">8d</td>
+              <td class="td-r num">9d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
               <td class="rank">#3</td>
@@ -983,8 +1128,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
               <td class="rank">#4</td>
               <td class="cli-name">Karina Luces</td>
               <td class="td-r num-strong">3</td>
-              <td class="td-r num">8</td>
-              <td class="td-r pct">38%</td>
+              <td class="td-r num">9</td>
+              <td class="td-r pct">33%</td>
               <td class="td-r num">6d</td>
               <td class="td-c"><span class="estado-dot verde"></span></td>
             </tr><tr>
@@ -1044,16 +1189,47 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">4</span></div><div class="trat-item"><span>Glacial Glide</span><span class="trat-num">4</span></div><div class="trat-item"><span>The Experience Skin Therapy</span><span class="trat-num">4</span></div>
       </div>
     </div>
-  </details>
-</div>
+  </details></div>
+</details>
 
-<!-- Próximos 7 días + Ocupación día semana -->
-<div class="two-col-50">
-  <div class="card">
-    <div class="card-title">Próximos 7 días <span class="badge" style="background:#7b68aa">Forward-looking</span></div>
-    <table class="next7-table">
-      <thead><tr><th>Día</th><th style="text-align:right;padding-right:10px">Citas/Cap</th><th>Ocupación</th><th style="text-align:right;padding-right:10px">Huecos</th><th>Por esthetician</th><th>Flag</th></tr></thead>
-      <tbody><tr class="opp">
+<!-- 🔥 Heatmap horario -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">🔥</span>
+    <span class="sec-title">Heatmap horario · Saturación de cabinas</span>
+    <span class="sec-sub">Histórico 180 días · L–S × franjas horarias</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    <div class="heatmap-wrap">
+      <table class="heatmap-table">
+        <thead><tr><th class="heat-h-corner"></th><th class="heat-h">Lun</th><th class="heat-h">Mar</th><th class="heat-h">Mié</th><th class="heat-h">Jue</th><th class="heat-h">Vie</th><th class="heat-h">Sáb</th></tr></thead>
+        <tbody><tr><td class="heat-day">9h</td><td class="heat-cell h0" title="Lunes 9h · 0 citas · 0%"></td><td class="heat-cell h0" title="Martes 9h · 0 citas · 0%"></td><td class="heat-cell h0" title="Miércoles 9h · 0 citas · 0%"></td><td class="heat-cell h0" title="Jueves 9h · 0 citas · 0%"></td><td class="heat-cell h0" title="Viernes 9h · 0 citas · 0%"></td><td class="heat-cell h0" title="Sábado 9h · 0 citas · 0%"></td></tr><tr><td class="heat-day">10h</td><td class="heat-cell h0" title="Lunes 10h · 0 citas · 0%"></td><td class="heat-cell h0" title="Martes 10h · 0 citas · 0%"></td><td class="heat-cell h0" title="Miércoles 10h · 0 citas · 0%"></td><td class="heat-cell h0" title="Jueves 10h · 0 citas · 0%"></td><td class="heat-cell h0" title="Viernes 10h · 0 citas · 0%"></td><td class="heat-cell h0" title="Sábado 10h · 0 citas · 0%"></td></tr><tr><td class="heat-day">11h</td><td class="heat-cell h0" title="Lunes 11h · 0 citas · 0%"></td><td class="heat-cell h0" title="Martes 11h · 0 citas · 0%"></td><td class="heat-cell h0" title="Miércoles 11h · 0 citas · 0%"></td><td class="heat-cell h0" title="Jueves 11h · 0 citas · 0%"></td><td class="heat-cell h0" title="Viernes 11h · 0 citas · 0%"></td><td class="heat-cell h0" title="Sábado 11h · 0 citas · 0%"></td></tr><tr><td class="heat-day">12h</td><td class="heat-cell h0" title="Lunes 12h · 0 citas · 0%"></td><td class="heat-cell h0" title="Martes 12h · 0 citas · 0%"></td><td class="heat-cell h0" title="Miércoles 12h · 0 citas · 0%"></td><td class="heat-cell h0" title="Jueves 12h · 0 citas · 0%"></td><td class="heat-cell h0" title="Viernes 12h · 0 citas · 0%"></td><td class="heat-cell h0" title="Sábado 12h · 0 citas · 0%"></td></tr><tr><td class="heat-day">13h</td><td class="heat-cell h0" title="Lunes 13h · 0 citas · 0%"></td><td class="heat-cell h0" title="Martes 13h · 0 citas · 0%"></td><td class="heat-cell h1" title="Miércoles 13h · 1 citas · 1.8%">1.8%</td><td class="heat-cell h0" title="Jueves 13h · 0 citas · 0%"></td><td class="heat-cell h0" title="Viernes 13h · 0 citas · 0%"></td><td class="heat-cell h4" title="Sábado 13h · 32 citas · 56.1%">56.1%</td></tr><tr><td class="heat-day">14h</td><td class="heat-cell h3" title="Lunes 14h · 24 citas · 42.1%">42.1%</td><td class="heat-cell h4" title="Martes 14h · 32 citas · 56.1%">56.1%</td><td class="heat-cell h2" title="Miércoles 14h · 18 citas · 31.6%">31.6%</td><td class="heat-cell h4" title="Jueves 14h · 31 citas · 51.7%">51.7%</td><td class="heat-cell h4" title="Viernes 14h · 35 citas · 53%">53%</td><td class="heat-cell h4" title="Sábado 14h · 38 citas · 66.7%">66.7%</td></tr><tr><td class="heat-day">15h</td><td class="heat-cell h3" title="Lunes 15h · 21 citas · 36.8%">36.8%</td><td class="heat-cell h3" title="Martes 15h · 22 citas · 38.6%">38.6%</td><td class="heat-cell h2" title="Miércoles 15h · 18 citas · 31.6%">31.6%</td><td class="heat-cell h3" title="Jueves 15h · 24 citas · 40%">40%</td><td class="heat-cell h3" title="Viernes 15h · 30 citas · 45.5%">45.5%</td><td class="heat-cell h2" title="Sábado 15h · 14 citas · 24.6%">24.6%</td></tr><tr><td class="heat-day">16h</td><td class="heat-cell h2" title="Lunes 16h · 13 citas · 22.8%">22.8%</td><td class="heat-cell h2" title="Martes 16h · 10 citas · 17.5%">17.5%</td><td class="heat-cell h2" title="Miércoles 16h · 16 citas · 28.1%">28.1%</td><td class="heat-cell h3" title="Jueves 16h · 21 citas · 35%">35%</td><td class="heat-cell h2" title="Viernes 16h · 16 citas · 24.2%">24.2%</td><td class="heat-cell h4" title="Sábado 16h · 34 citas · 59.6%">59.6%</td></tr><tr><td class="heat-day">17h</td><td class="heat-cell h2" title="Lunes 17h · 19 citas · 33.3%">33.3%</td><td class="heat-cell h2" title="Martes 17h · 12 citas · 21.1%">21.1%</td><td class="heat-cell h2" title="Miércoles 17h · 11 citas · 19.3%">19.3%</td><td class="heat-cell h2" title="Jueves 17h · 18 citas · 30%">30%</td><td class="heat-cell h3" title="Viernes 17h · 23 citas · 34.8%">34.8%</td><td class="heat-cell h3" title="Sábado 17h · 23 citas · 40.4%">40.4%</td></tr><tr><td class="heat-day">18h</td><td class="heat-cell h1" title="Lunes 18h · 4 citas · 7%">7%</td><td class="heat-cell h2" title="Martes 18h · 10 citas · 17.5%">17.5%</td><td class="heat-cell h1" title="Miércoles 18h · 5 citas · 8.8%">8.8%</td><td class="heat-cell h1" title="Jueves 18h · 8 citas · 13.3%">13.3%</td><td class="heat-cell h1" title="Viernes 18h · 4 citas · 6.1%">6.1%</td><td class="heat-cell h1" title="Sábado 18h · 3 citas · 5.3%">5.3%</td></tr><tr><td class="heat-day">19h</td><td class="heat-cell h2" title="Lunes 19h · 18 citas · 31.6%">31.6%</td><td class="heat-cell h2" title="Martes 19h · 17 citas · 29.8%">29.8%</td><td class="heat-cell h2" title="Miércoles 19h · 13 citas · 22.8%">22.8%</td><td class="heat-cell h2" title="Jueves 19h · 20 citas · 33.3%">33.3%</td><td class="heat-cell h3" title="Viernes 19h · 27 citas · 40.9%">40.9%</td><td class="heat-cell h2" title="Sábado 19h · 15 citas · 26.3%">26.3%</td></tr></tbody>
+      </table>
+    </div>
+    <div class="heatmap-legend">
+      <span class="hl">Menor ocupación</span>
+      <span class="hbox h0"></span><span class="hbox h1"></span><span class="hbox h2"></span><span class="hbox h3"></span><span class="hbox h4"></span>
+      <span class="hl">Mayor</span>
+    </div>
+    <div class="churn-nota">💡 Las celdas rojas (alta ocupación) están saturadas — promover esas horas con descuento es contraproducente. Las celdas claras son oportunidades para promos quirúrgicas.</div>
+  </div>
+</details>
+
+<!-- 📅 Próximos 7 días + ocupación por día -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">📅</span>
+    <span class="sec-title">Próximos 7 días · Ocupación esperada</span>
+    <span class="sec-sub">Forward-looking · agenda confirmada</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    <div class="two-col-50">
+      <div>
+        <table class="next7-table">
+          <thead><tr><th>Día</th><th class="th-r">Citas/Cap</th><th>Ocupación</th><th class="th-r">Huecos</th><th>Por esthetician</th><th>Flag</th></tr></thead>
+          <tbody><tr class="opp">
     <td><strong>vie</strong> 22</td>
     <td class="num-strong">0/15</td>
     <td><div class="bar-wrap-7d"><div class="bar-fill-7d rojo" style="width:0%"></div></div><span class="bar-pct">0%</span></td>
@@ -1096,11 +1272,11 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">—</td>
     <td><span class="tag-opp">Oportunidad</span></td>
   </tr></tbody>
-    </table>
-  </div>
-  <div class="card">
-    <div class="card-title">Ocupación histórica por día de semana</div>
-    <div class="dia-chart"><div class="dia-col">
+        </table>
+      </div>
+      <div>
+        <div class="trat-title" style="margin-bottom:8px">Ocupación histórica por día de semana</div>
+        <div class="dia-chart"><div class="dia-col">
     <div class="dia-pct-label">48.9%</div>
     <div class="dia-bar-track"><div class="dia-bar ambar" style="height:73%"></div></div>
     <div class="dia-label">Lun</div>
@@ -1131,28 +1307,124 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <div class="dia-label">Sáb</div>
     <div class="dia-citas">30</div>
   </div></div>
+      </div>
+    </div>
   </div>
-</div>
+</details>
 
-<!-- ✅ v7 PARETO -->
-<div class="two-col-60">
-  <div class="card">
-    <div class="card-title">Pareto — Top 10 clientas del mes
-      <span style="margin-left:auto;font-size:9px;color:var(--mid);font-weight:400">Concentración: 30.3% 🟢</span>
+<!-- 🔄 Retención avanzada -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">🔄</span>
+    <span class="sec-title">Retención avanzada</span>
+    <span class="sec-sub">Frecuencia · Conversión a paquete · Cohorte 6m</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    <!-- Frecuencia entre visitas -->
+    <div class="ret-block">
+      <div class="trat-title">Frecuencia entre visitas (clientes con ≥2 visitas en 180d)</div>
+      <div class="ret-hero">
+        <div class="ret-hero-num verde">28d</div>
+        <div class="ret-hero-lbl">promedio entre visitas · 🟢<br><span style="color:#999;font-size:9px">230 clientes en muestra</span></div>
+      </div>
+      <div class="frec-distrib"><div class="frec-row">
+    <span class="frec-lbl"><21d</span>
+    <div class="frec-bar-wrap"><div class="frec-bar" style="width:40%"></div></div>
+    <span class="frec-num">92 <span style="color:#999">(40%)</span></span>
+  </div><div class="frec-row">
+    <span class="frec-lbl">21-30d</span>
+    <div class="frec-bar-wrap"><div class="frec-bar" style="width:25%"></div></div>
+    <span class="frec-num">58 <span style="color:#999">(25%)</span></span>
+  </div><div class="frec-row">
+    <span class="frec-lbl">31-45d</span>
+    <div class="frec-bar-wrap"><div class="frec-bar" style="width:17%"></div></div>
+    <span class="frec-num">38 <span style="color:#999">(17%)</span></span>
+  </div><div class="frec-row">
+    <span class="frec-lbl">46-60d</span>
+    <div class="frec-bar-wrap"><div class="frec-bar" style="width:9%"></div></div>
+    <span class="frec-num">21 <span style="color:#999">(9%)</span></span>
+  </div><div class="frec-row">
+    <span class="frec-lbl">>60d</span>
+    <div class="frec-bar-wrap"><div class="frec-bar" style="width:9%"></div></div>
+    <span class="frec-num">21 <span style="color:#999">(9%)</span></span>
+  </div></div>
     </div>
-    <div class="pareto-summary">
+
+    <!-- Conversión Individual → Paquete -->
+    <div class="ret-block">
+      <div class="trat-title">Conversión: tratamiento individual → paquete (130d)</div>
+      <div class="ret-hero">
+        <div class="ret-hero-num rojo">8.7%</div>
+        <div class="ret-hero-lbl">32 de 367 compraron paquete · 🔴<br><span style="color:#999;font-size:9px">Benchmark industria: 25%+</span></div>
+      </div>
+    </div>
+
+    <!-- Cohorte heatmap -->
+    <div class="ret-block">
+      <div class="trat-title">Cohorte de retención · curva 6 meses
+        <span style="font-size:9px;color:var(--mid);font-weight:400;margin-left:8px">% de cada cohorte que vuelve cada mes siguiente</span>
+      </div>
+      <div class="cohort-wrap">
+        <table class="cohort-table">
+          <thead><tr><th>Cohorte</th><th class="num">Size</th><th class="cohort-h">M0</th><th class="cohort-h">M1</th><th class="cohort-h">M2</th><th class="cohort-h">M3</th><th class="cohort-h">M4</th><th class="cohort-h">M5</th></tr></thead>
+          <tbody><tr>
+    <td class="cohort-lbl">dic</td>
+    <td class="num">0</td>
+    <td class="cohort-cell c0" title="0 de 0">0%</td><td class="cohort-cell c0" title="0 de 0">0%</td><td class="cohort-cell c0" title="0 de 0">0%</td><td class="cohort-cell c0" title="0 de 0">0%</td><td class="cohort-cell c0" title="0 de 0">0%</td><td class="cohort-cell c0" title="0 de 0">0%</td>
+  </tr><tr>
+    <td class="cohort-lbl">ene</td>
+    <td class="num">116</td>
+    <td class="cohort-cell c4" title="116 de 116">100%</td><td class="cohort-cell c2" title="47 de 116">41%</td><td class="cohort-cell c2" title="47 de 116">41%</td><td class="cohort-cell c2" title="40 de 116">34%</td><td class="cohort-cell c2" title="30 de 116">26%</td><td class="cohort-cell empty"></td>
+  </tr><tr>
+    <td class="cohort-lbl">feb</td>
+    <td class="num">96</td>
+    <td class="cohort-cell c4" title="96 de 96">100%</td><td class="cohort-cell c2" title="37 de 96">39%</td><td class="cohort-cell c2" title="32 de 96">33%</td><td class="cohort-cell c1" title="16 de 96">17%</td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td>
+  </tr><tr>
+    <td class="cohort-lbl">mar</td>
+    <td class="num">88</td>
+    <td class="cohort-cell c4" title="88 de 88">100%</td><td class="cohort-cell c2" title="30 de 88">34%</td><td class="cohort-cell c1" title="14 de 88">16%</td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td>
+  </tr><tr>
+    <td class="cohort-lbl">abr</td>
+    <td class="num">67</td>
+    <td class="cohort-cell c4" title="67 de 67">100%</td><td class="cohort-cell c1" title="13 de 67">19%</td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td>
+  </tr><tr>
+    <td class="cohort-lbl">may</td>
+    <td class="num">44</td>
+    <td class="cohort-cell c4" title="44 de 44">100%</td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td><td class="cohort-cell empty"></td>
+  </tr></tbody>
+        </table>
+      </div>
+      <div class="churn-nota">💡 M0 = mes de la primera visita (siempre 100%). M1, M2... = % de esa misma cohorte que volvió al menos 1 vez en cada mes posterior. Curva ideal: ≥40% en M1 y estabilizar arriba de 25% hacia M6.</div>
+    </div>
+  </div>
+</details>
+
+<!-- 🏆 Pareto + Catálogos -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">🏆</span>
+    <span class="sec-title">Pareto Top 10 · Catálogos</span>
+    <span class="sec-sub">Concentración: 30.3% 🟢 · Top tratamientos/productos/membresías</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    <div class="two-col-60">
       <div>
-        <div class="pareto-pct">30.3%</div>
-        <div class="pareto-lbl">del revenue del mes viene del Top 10</div>
-      </div>
-      <div style="text-align:right">
-        <div class="pareto-lbl">Total Top 10</div>
-        <div style="font-family:'DM Mono';font-size:16px;font-weight:700;color:var(--warm-dk)">$4.605</div>
-      </div>
-    </div>
-    <table class="pareto-table">
-      <thead><tr><th></th><th>Cliente</th><th style="text-align:right;padding-right:10px">Revenue mes</th><th style="text-align:right;padding-right:10px">Citas</th><th style="text-align:right;padding-right:10px">% total</th></tr></thead>
-      <tbody><tr>
+        <div class="trat-title">Top 10 clientas del mes</div>
+        <div class="pareto-summary">
+          <div>
+            <div class="pareto-pct">30.3%</div>
+            <div class="pareto-lbl">del revenue del mes viene del Top 10</div>
+          </div>
+          <div style="text-align:right">
+            <div class="pareto-lbl">Total Top 10</div>
+            <div style="font-family:'DM Mono';font-size:16px;font-weight:700;color:var(--warm-dk)">$4.605</div>
+          </div>
+        </div>
+        <table class="pareto-table">
+          <thead><tr><th></th><th>Cliente</th><th class="th-r">Revenue mes</th><th class="th-r">Citas</th><th class="th-r">% total</th></tr></thead>
+          <tbody><tr>
   <td class="rank">#1</td>
   <td class="cli-name">Cristina Fienco</td>
   <td class="num-strong">$550</td>
@@ -1213,12 +1485,12 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   <td class="num">1</td>
   <td class="num pct">2.5%</td>
 </tr></tbody>
-    </table>
-    
-  </div>
-  <div class="card">
-    <div class="card-title">Top 5 tratamientos <span class="badge">Reservas</span></div>
-    <div class="svc-row">
+        </table>
+        
+      </div>
+      <div>
+        <div class="trat-title">Top 5 tratamientos</div>
+        <div class="svc-row">
     <span class="svc-name">Hydrafacial MD</span>
     <div class="svc-bar-wrap"><div class="svc-bar" style="width:100%"></div></div>
     <span class="svc-cnt">33</span>
@@ -1244,14 +1516,13 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <span class="svc-cnt">11</span>
     <span class="svc-rev">$1.050</span>
   </div>
-  </div>
-</div>
+      </div>
+    </div>
 
-<!-- Productos + Membresías -->
-<div class="two-col-50">
-  <div class="card">
-    <div class="card-title">Top 5 productos <span class="badge" style="background:#6b8f71">Venta</span></div>
-    <div class="svc-row">
+    <div class="two-col-50" style="margin-top:18px">
+      <div>
+        <div class="trat-title">Top 5 productos (retail)</div>
+        <div class="svc-row">
     <span class="svc-name">Green Tea Citrus Cleanser</span>
     <div class="svc-bar-wrap"><div class="svc-bar" style="width:100%;background:linear-gradient(90deg,#6b8f71,#a8c5a0)"></div></div>
     <span class="svc-cnt">1u</span>
@@ -1262,10 +1533,10 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <span class="svc-cnt">1u</span>
     <span class="svc-rev">$13</span>
   </div>
-  </div>
-  <div class="card">
-    <div class="card-title">Top 5 membresías <span class="badge" style="background:#7b68aa">Caja</span></div>
-    <div class="svc-row">
+      </div>
+      <div>
+        <div class="trat-title">Top 5 membresías (caja)</div>
+        <div class="svc-row">
     <span class="svc-name">Glow Lab</span>
     <div class="svc-bar-wrap"><div class="svc-bar" style="width:100%;background:linear-gradient(90deg,#7b68aa,#b8a8d8)"></div></div>
     <span class="svc-cnt">3x</span>
@@ -1291,34 +1562,71 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <span class="svc-cnt">3x</span>
     <span class="svc-rev">$636</span>
   </div>
-  </div>
-</div>
-
-<!-- ✅ v7 CHURN ACCIONABLE -->
-<div class="card">
-  <div class="card-title">Retención de clientes — Churn 🔴
-    <span style="margin-left:auto;font-size:9px;color:var(--mid);font-weight:400">Última actividad = max(caja, reserva)</span>
-  </div>
-  <div class="churn-summary">
-    <div class="csb r"><div class="csb-num">174</div><div class="csb-lbl">ROJO · +45 días</div></div>
-    <div class="csb a"><div class="csb-num">62</div><div class="csb-lbl">ÁMBAR · 30–44 días</div></div>
-    <div class="csb v"><div class="csb-num">9</div><div class="csb-lbl">Pendientes mes</div></div>
-    <div class="csb r" style="background:#fff5f5">
-      <div class="csb-num" style="font-size:20px;color:var(--rojo)">$43.516</div>
-      <div class="csb-lbl">Revenue en riesgo</div>
+      </div>
     </div>
   </div>
+</details>
 
-  <div class="churn-actions">
-    <button class="btn-action" onclick="copyPhones()">📱 Copiar teléfonos Top 10</button>
-    <button class="btn-action outline" onclick="downloadCSV()">⬇️ Descargar CSV Top 30</button>
-    <button class="btn-action outline" onclick="copyTable()">📋 Copiar tabla (WhatsApp)</button>
+<!-- 🚨 No-show + Cancelaciones -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">🚨</span>
+    <span class="sec-title">No-show y cancelaciones</span>
+    <span class="sec-sub">17 no-shows · costo ~$1.360</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    <div class="noshow-grid">
+      <div class="csb r">
+        <div class="csb-num">17</div>
+        <div class="csb-lbl">No-show puros</div>
+        <div class="ns-cost">~$1.360 costo</div>
+      </div>
+      <div class="csb a">
+        <div class="csb-num">0</div>
+        <div class="csb-lbl">Cancelación tardía</div>
+        <div class="ns-cost">&lt;24h anticipación</div>
+      </div>
+      <div class="csb v">
+        <div class="csb-num">0</div>
+        <div class="csb-lbl">Cancelación anticipada</div>
+        <div class="ns-cost">≥24h · hueco rellenable</div>
+      </div>
+    </div>
+    <div class="churn-nota">⚠️ <strong>17 no-shows este mes</strong> equivalen a ~$1.360 en costo de oportunidad. Considera política de depósito 50% para reservas o confirmación obligatoria con 24h.</div>
   </div>
+</details>
 
-  <div class="card-title" style="margin-top:4px">Top 30 clientes ROJO — accionable</div>
-  <table class="churn-table" id="churnTable">
-    <thead><tr><th></th><th>Cliente</th><th style="text-align:right;padding-right:10px">Revenue hist.</th><th>Días</th><th>Último servicio</th><th>Esthetician</th><th>Teléfono</th></tr></thead>
-    <tbody><tr>
+<!-- 🚨 CHURN ACCIONABLE -->
+<details class="section-acc">
+  <summary>
+    <span class="sec-icon">🔴</span>
+    <span class="sec-title">Churn accionable · Top 30 ROJO</span>
+    <span class="sec-sub">184 clientes ROJO · $47.889 en riesgo 🔴</span>
+    <span class="sec-arrow">▾</span>
+  </summary>
+  <div class="sec-body">
+    <div class="churn-summary">
+      <div class="csb r"><div class="csb-num">184</div><div class="csb-lbl">ROJO · +45 días</div></div>
+      <div class="csb a"><div class="csb-num">62</div><div class="csb-lbl">ÁMBAR · 30–44 días</div></div>
+      <div class="csb v"><div class="csb-num">9</div><div class="csb-lbl">Pendientes mes</div></div>
+      <div class="csb r" style="background:#fff5f5">
+        <div class="csb-num" style="font-size:20px;color:var(--rojo)">$47.889</div>
+        <div class="csb-lbl">Revenue en riesgo</div>
+      </div>
+    </div>
+
+    <div class="churn-actions">
+      <button class="btn-action" onclick="copyPhones()">📱 Copiar teléfonos Top 10</button>
+      <button class="btn-action outline" onclick="downloadCSV()">⬇️ Descargar CSV Top 30</button>
+      <button class="btn-action outline" onclick="copyTable()">📋 Copiar tabla (WhatsApp)</button>
+    </div>
+
+    <div class="trat-title" style="margin-top:14px">Top 30 clientes ROJO — accionable</div>
+    <div class="churn-table-wrap">
+      <table class="churn-table" id="churnTable">
+        <thead><tr><th></th><th>Cliente</th><th class="th-r">Revenue hist.</th><th>Días</th><th>Último servicio</th><th>Esthetician</th><th>Teléfono</th></tr></thead>
+        <tbody><tr>
     <td class="rank">#1</td>
     <td class="cli-name">Michelle Vargas</td>
     <td class="num-strong">$8.591</td>
@@ -1336,6 +1644,14 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="tel">+380989939353</td>
   </tr><tr>
     <td class="rank">#3</td>
+    <td class="cli-name">Indira Cubillos</td>
+    <td class="num-strong">$6.087</td>
+    <td><span class="dias-badge" style="background:#c0392b">139d</span></td>
+    <td class="serv-cell">—</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593959618638</td>
+  </tr><tr>
+    <td class="rank">#4</td>
     <td class="cli-name">Jannina Cabal</td>
     <td class="num-strong">$5.922</td>
     <td><span class="dias-badge" style="background:#c0392b">74d</span></td>
@@ -1343,7 +1659,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+593994388429</td>
   </tr><tr>
-    <td class="rank">#4</td>
+    <td class="rank">#5</td>
     <td class="cli-name">Julia Villares</td>
     <td class="num-strong">$5.782</td>
     <td><span class="dias-badge" style="background:#c0392b">86d</span></td>
@@ -1351,7 +1667,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+986022465</td>
   </tr><tr>
-    <td class="rank">#5</td>
+    <td class="rank">#6</td>
     <td class="cli-name">Erika Garaicoa</td>
     <td class="num-strong">$4.449</td>
     <td><span class="dias-badge" style="background:#c0392b">83d</span></td>
@@ -1359,7 +1675,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+593980236493</td>
   </tr><tr>
-    <td class="rank">#6</td>
+    <td class="rank">#7</td>
     <td class="cli-name">Michelle Swett</td>
     <td class="num-strong">$3.466</td>
     <td><span class="dias-badge" style="background:#e67e22">51d</span></td>
@@ -1367,7 +1683,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+593997075064</td>
   </tr><tr>
-    <td class="rank">#7</td>
+    <td class="rank">#8</td>
     <td class="cli-name">Lily Cueva</td>
     <td class="num-strong">$2.612</td>
     <td><span class="dias-badge" style="background:#d4860a">47d</span></td>
@@ -1375,15 +1691,31 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+983454605</td>
   </tr><tr>
-    <td class="rank">#8</td>
+    <td class="rank">#9</td>
+    <td class="cli-name">Emilia Ochoa</td>
+    <td class="num-strong">$2.454</td>
+    <td><span class="dias-badge" style="background:#c0392b">138d</span></td>
+    <td class="serv-cell">—</td>
+    <td class="esth-cell">Milena</td>
+    <td class="tel">+593983281789</td>
+  </tr><tr>
+    <td class="rank">#10</td>
+    <td class="cli-name">Diana Carrion</td>
+    <td class="num-strong">$2.380</td>
+    <td><span class="dias-badge" style="background:#c0392b">136d</span></td>
+    <td class="serv-cell">Hydrafacial MD</td>
+    <td class="esth-cell">Carla</td>
+    <td class="tel">+593993683568</td>
+  </tr><tr>
+    <td class="rank">#11</td>
     <td class="cli-name">Karla Pesantez</td>
     <td class="num-strong">$2.217</td>
-    <td><span class="dias-badge" style="background:#c0392b">85d</span></td>
+    <td><span class="dias-badge" style="background:#c0392b">86d</span></td>
     <td class="serv-cell">Skin Booster AH</td>
     <td class="esth-cell">Carla</td>
     <td class="tel">+991486665</td>
   </tr><tr>
-    <td class="rank">#9</td>
+    <td class="rank">#12</td>
     <td class="cli-name">Maria Isabel Petrinic</td>
     <td class="num-strong">$2.213</td>
     <td><span class="dias-badge" style="background:#c0392b">106d</span></td>
@@ -1391,7 +1723,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+12016604506</td>
   </tr><tr>
-    <td class="rank">#10</td>
+    <td class="rank">#13</td>
     <td class="cli-name">Gisella Ledesma</td>
     <td class="num-strong">$2.118</td>
     <td><span class="dias-badge" style="background:#c0392b">121d</span></td>
@@ -1399,7 +1731,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+999572251</td>
   </tr><tr>
-    <td class="rank">#11</td>
+    <td class="rank">#14</td>
     <td class="cli-name">Denise Sanabria</td>
     <td class="num-strong">$1.952</td>
     <td><span class="dias-badge" style="background:#d4860a">49d</span></td>
@@ -1407,7 +1739,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+593993356804</td>
   </tr><tr>
-    <td class="rank">#12</td>
+    <td class="rank">#15</td>
     <td class="cli-name">Raquel Del Valle</td>
     <td class="num-strong">$1.908</td>
     <td><span class="dias-badge" style="background:#d4860a">48d</span></td>
@@ -1415,7 +1747,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+991516910</td>
   </tr><tr>
-    <td class="rank">#13</td>
+    <td class="rank">#16</td>
     <td class="cli-name">Ximena Decker</td>
     <td class="num-strong">$1.882</td>
     <td><span class="dias-badge" style="background:#c0392b">110d</span></td>
@@ -1423,7 +1755,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+983860976</td>
   </tr><tr>
-    <td class="rank">#14</td>
+    <td class="rank">#17</td>
     <td class="cli-name">Walleska Bajaña</td>
     <td class="num-strong">$1.820</td>
     <td><span class="dias-badge" style="background:#c0392b">65d</span></td>
@@ -1431,7 +1763,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+593983491620</td>
   </tr><tr>
-    <td class="rank">#15</td>
+    <td class="rank">#18</td>
     <td class="cli-name">Milena Tettamanti</td>
     <td class="num-strong">$1.775</td>
     <td><span class="dias-badge" style="background:#e67e22">55d</span></td>
@@ -1439,7 +1771,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+985200794</td>
   </tr><tr>
-    <td class="rank">#16</td>
+    <td class="rank">#19</td>
     <td class="cli-name">Oriana Abreu</td>
     <td class="num-strong">$1.767</td>
     <td><span class="dias-badge" style="background:#e67e22">51d</span></td>
@@ -1447,7 +1779,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+981650376</td>
   </tr><tr>
-    <td class="rank">#17</td>
+    <td class="rank">#20</td>
     <td class="cli-name">Carolina Salcedo</td>
     <td class="num-strong">$1.734</td>
     <td><span class="dias-badge" style="background:#c0392b">120d</span></td>
@@ -1455,7 +1787,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+380985449799</td>
   </tr><tr>
-    <td class="rank">#18</td>
+    <td class="rank">#21</td>
     <td class="cli-name">Arianna Ortega</td>
     <td class="num-strong">$1.490</td>
     <td><span class="dias-badge" style="background:#c0392b">72d</span></td>
@@ -1463,7 +1795,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+593994500233</td>
   </tr><tr>
-    <td class="rank">#19</td>
+    <td class="rank">#22</td>
     <td class="cli-name">Alberto Rosado</td>
     <td class="num-strong">$1.410</td>
     <td><span class="dias-badge" style="background:#c0392b">69d</span></td>
@@ -1471,7 +1803,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+593983340243</td>
   </tr><tr>
-    <td class="rank">#20</td>
+    <td class="rank">#23</td>
     <td class="cli-name">Karla Scippa</td>
     <td class="num-strong">$1.400</td>
     <td><span class="dias-badge" style="background:#c0392b">76d</span></td>
@@ -1479,15 +1811,15 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+593995237981</td>
   </tr><tr>
-    <td class="rank">#21</td>
+    <td class="rank">#24</td>
     <td class="cli-name">Stefania Goncalves</td>
     <td class="num-strong">$1.393</td>
-    <td><span class="dias-badge" style="background:#c0392b">64d</span></td>
+    <td><span class="dias-badge" style="background:#c0392b">65d</span></td>
     <td class="serv-cell">Hydrafacial MD</td>
     <td class="esth-cell">Milena</td>
     <td class="tel">+992200465</td>
   </tr><tr>
-    <td class="rank">#22</td>
+    <td class="rank">#25</td>
     <td class="cli-name">Claudia Bolona</td>
     <td class="num-strong">$1.365</td>
     <td><span class="dias-badge" style="background:#c0392b">67d</span></td>
@@ -1495,7 +1827,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Karla</td>
     <td class="tel">+593994347151</td>
   </tr><tr>
-    <td class="rank">#23</td>
+    <td class="rank">#26</td>
     <td class="cli-name">Stephanie Castillo</td>
     <td class="num-strong">$1.349</td>
     <td><span class="dias-badge" style="background:#c0392b">82d</span></td>
@@ -1503,7 +1835,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+992059753</td>
   </tr><tr>
-    <td class="rank">#24</td>
+    <td class="rank">#27</td>
     <td class="cli-name">Stefania Franco</td>
     <td class="num-strong">$1.340</td>
     <td><span class="dias-badge" style="background:#c0392b">63d</span></td>
@@ -1511,7 +1843,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Carla</td>
     <td class="tel">+993020253</td>
   </tr><tr>
-    <td class="rank">#25</td>
+    <td class="rank">#28</td>
     <td class="cli-name">Gina Peña</td>
     <td class="num-strong">$1.226</td>
     <td><span class="dias-badge" style="background:#e67e22">51d</span></td>
@@ -1519,7 +1851,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+593958921573</td>
   </tr><tr>
-    <td class="rank">#26</td>
+    <td class="rank">#29</td>
     <td class="cli-name">Grace Cassis</td>
     <td class="num-strong">$1.220</td>
     <td><span class="dias-badge" style="background:#e67e22">57d</span></td>
@@ -1527,47 +1859,25 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="esth-cell">Milena</td>
     <td class="tel">+593997050412</td>
   </tr><tr>
-    <td class="rank">#27</td>
+    <td class="rank">#30</td>
     <td class="cli-name">Kristty Gil</td>
     <td class="num-strong">$1.185</td>
     <td><span class="dias-badge" style="background:#c0392b">116d</span></td>
     <td class="serv-cell">Peel Manchas</td>
     <td class="esth-cell">Milena</td>
     <td class="tel">+593991318888</td>
-  </tr><tr>
-    <td class="rank">#28</td>
-    <td class="cli-name">Domenica Villavicencio</td>
-    <td class="num-strong">$1.110</td>
-    <td><span class="dias-badge" style="background:#c0392b">114d</span></td>
-    <td class="serv-cell">Hydrafacial MD</td>
-    <td class="esth-cell">Carla</td>
-    <td class="tel">+593939240096</td>
-  </tr><tr>
-    <td class="rank">#29</td>
-    <td class="cli-name">Yamara Cordova</td>
-    <td class="num-strong">$1.107</td>
-    <td><span class="dias-badge" style="background:#c0392b">98d</span></td>
-    <td class="serv-cell">Valentine´s Facial</td>
-    <td class="esth-cell">Milena</td>
-    <td class="tel">+593993914737</td>
-  </tr><tr>
-    <td class="rank">#30</td>
-    <td class="cli-name">Rossana Romero</td>
-    <td class="num-strong">$1.063</td>
-    <td><span class="dias-badge" style="background:#e67e22">58d</span></td>
-    <td class="serv-cell">Kim K Korean Facial</td>
-    <td class="esth-cell">Milena</td>
-    <td class="tel">+593986421196</td>
   </tr></tbody>
-  </table>
-  <div class="churn-nota">⚠️ <strong>Metodología:</strong> última actividad = max(última transacción en caja, última reserva asistida). Clientes con paquetes prepagados no se marcan ROJO mientras tengan reservas recientes.</div>
-</div>
+      </table>
+    </div>
+    <div class="churn-nota">⚠️ <strong>Metodología:</strong> última actividad = max(última transacción en caja, última reserva asistida). Clientes con paquetes prepagados no se marcan ROJO mientras tengan reservas recientes.</div>
+  </div>
+</details>
 
 </div>
-<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 21 may 2026 · Datos: Altegio API · 7:30 AM ECT · v7.4</div>
+<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 21 may 2026 · Datos: Altegio API · 7:30 AM ECT · v7.6</div>
 
 <!-- Hidden data for copy/export actions -->
-<script type="application/json" id="churnData">[{"nombre":"Michelle Vargas","dias":113,"revenue_hist":8591,"tel":"+992472086","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Martha Mata","dias":117,"revenue_hist":6146,"tel":"+380989939353","ultServicio":"Contorno de Labios","ultEsth":"Carla"},{"nombre":"Jannina Cabal","dias":74,"revenue_hist":5922,"tel":"+593994388429","ultServicio":"Exosomas + Tecnología Avanzada","ultEsth":"Carla"},{"nombre":"Julia Villares","dias":86,"revenue_hist":5782,"tel":"+986022465","ultServicio":"Intensif Estrías","ultEsth":"Carla"},{"nombre":"Erika Garaicoa","dias":83,"revenue_hist":4449,"tel":"+593980236493","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Michelle Swett","dias":51,"revenue_hist":3466,"tel":"+593997075064","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Lily Cueva","dias":47,"revenue_hist":2612,"tel":"+983454605","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Karla Pesantez","dias":85,"revenue_hist":2217,"tel":"+991486665","ultServicio":"Skin Booster AH","ultEsth":"Carla"},{"nombre":"Maria Isabel Petrinic","dias":106,"revenue_hist":2213,"tel":"+12016604506","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Gisella Ledesma","dias":121,"revenue_hist":2118,"tel":"+999572251","ultServicio":"Kim K Korean Facial","ultEsth":"Carla"},{"nombre":"Denise Sanabria","dias":49,"revenue_hist":1952,"tel":"+593993356804","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Raquel Del Valle","dias":48,"revenue_hist":1908,"tel":"+991516910","ultServicio":"Teens Facial","ultEsth":"Milena"},{"nombre":"Ximena Decker","dias":110,"revenue_hist":1882,"tel":"+983860976","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Walleska Bajaña","dias":65,"revenue_hist":1820,"tel":"+593983491620","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Milena Tettamanti","dias":55,"revenue_hist":1775,"tel":"+985200794","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Oriana Abreu","dias":51,"revenue_hist":1767,"tel":"+981650376","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Carolina Salcedo","dias":120,"revenue_hist":1734,"tel":"+380985449799","ultServicio":"Glacial Glide","ultEsth":"Carla"},{"nombre":"Arianna Ortega","dias":72,"revenue_hist":1490,"tel":"+593994500233","ultServicio":"Glacial Gloss","ultEsth":"Carla"},{"nombre":"Alberto Rosado","dias":69,"revenue_hist":1410,"tel":"+593983340243","ultServicio":"SkinPen + Exosomas","ultEsth":"Carla"},{"nombre":"Karla Scippa","dias":76,"revenue_hist":1400,"tel":"+593995237981","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Stefania Goncalves","dias":64,"revenue_hist":1393,"tel":"+992200465","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Claudia Bolona","dias":67,"revenue_hist":1365,"tel":"+593994347151","ultServicio":"Face Massage","ultEsth":"Karla"},{"nombre":"Stephanie Castillo","dias":82,"revenue_hist":1349,"tel":"+992059753","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Stefania Franco","dias":63,"revenue_hist":1340,"tel":"+993020253","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Gina Peña","dias":51,"revenue_hist":1226,"tel":"+593958921573","ultServicio":"Microneedling con PDRN","ultEsth":"Milena"},{"nombre":"Grace Cassis","dias":57,"revenue_hist":1220,"tel":"+593997050412","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"},{"nombre":"Kristty Gil","dias":116,"revenue_hist":1185,"tel":"+593991318888","ultServicio":"Peel Manchas","ultEsth":"Milena"},{"nombre":"Domenica Villavicencio","dias":114,"revenue_hist":1110,"tel":"+593939240096","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Yamara Cordova","dias":98,"revenue_hist":1107,"tel":"+593993914737","ultServicio":"Valentine´s Facial","ultEsth":"Milena"},{"nombre":"Rossana Romero","dias":58,"revenue_hist":1063,"tel":"+593986421196","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"}]</script>
+<script type="application/json" id="churnData">[{"nombre":"Michelle Vargas","dias":113,"revenue_hist":8591,"tel":"+992472086","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Martha Mata","dias":117,"revenue_hist":6146,"tel":"+380989939353","ultServicio":"Contorno de Labios","ultEsth":"Carla"},{"nombre":"Indira Cubillos","dias":139,"revenue_hist":6087,"tel":"+593959618638","ultServicio":"—","ultEsth":"Milena"},{"nombre":"Jannina Cabal","dias":74,"revenue_hist":5922,"tel":"+593994388429","ultServicio":"Exosomas + Tecnología Avanzada","ultEsth":"Carla"},{"nombre":"Julia Villares","dias":86,"revenue_hist":5782,"tel":"+986022465","ultServicio":"Intensif Estrías","ultEsth":"Carla"},{"nombre":"Erika Garaicoa","dias":83,"revenue_hist":4449,"tel":"+593980236493","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Michelle Swett","dias":51,"revenue_hist":3466,"tel":"+593997075064","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Lily Cueva","dias":47,"revenue_hist":2612,"tel":"+983454605","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Emilia Ochoa","dias":138,"revenue_hist":2454,"tel":"+593983281789","ultServicio":"—","ultEsth":"Milena"},{"nombre":"Diana Carrion","dias":136,"revenue_hist":2380,"tel":"+593993683568","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Karla Pesantez","dias":86,"revenue_hist":2217,"tel":"+991486665","ultServicio":"Skin Booster AH","ultEsth":"Carla"},{"nombre":"Maria Isabel Petrinic","dias":106,"revenue_hist":2213,"tel":"+12016604506","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Gisella Ledesma","dias":121,"revenue_hist":2118,"tel":"+999572251","ultServicio":"Kim K Korean Facial","ultEsth":"Carla"},{"nombre":"Denise Sanabria","dias":49,"revenue_hist":1952,"tel":"+593993356804","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Raquel Del Valle","dias":48,"revenue_hist":1908,"tel":"+991516910","ultServicio":"Teens Facial","ultEsth":"Milena"},{"nombre":"Ximena Decker","dias":110,"revenue_hist":1882,"tel":"+983860976","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Walleska Bajaña","dias":65,"revenue_hist":1820,"tel":"+593983491620","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Milena Tettamanti","dias":55,"revenue_hist":1775,"tel":"+985200794","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Oriana Abreu","dias":51,"revenue_hist":1767,"tel":"+981650376","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Carolina Salcedo","dias":120,"revenue_hist":1734,"tel":"+380985449799","ultServicio":"Glacial Glide","ultEsth":"Carla"},{"nombre":"Arianna Ortega","dias":72,"revenue_hist":1490,"tel":"+593994500233","ultServicio":"Glacial Gloss","ultEsth":"Carla"},{"nombre":"Alberto Rosado","dias":69,"revenue_hist":1410,"tel":"+593983340243","ultServicio":"SkinPen + Exosomas","ultEsth":"Carla"},{"nombre":"Karla Scippa","dias":76,"revenue_hist":1400,"tel":"+593995237981","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Stefania Goncalves","dias":65,"revenue_hist":1393,"tel":"+992200465","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Claudia Bolona","dias":67,"revenue_hist":1365,"tel":"+593994347151","ultServicio":"Face Massage","ultEsth":"Karla"},{"nombre":"Stephanie Castillo","dias":82,"revenue_hist":1349,"tel":"+992059753","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Stefania Franco","dias":63,"revenue_hist":1340,"tel":"+993020253","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Gina Peña","dias":51,"revenue_hist":1226,"tel":"+593958921573","ultServicio":"Microneedling con PDRN","ultEsth":"Milena"},{"nombre":"Grace Cassis","dias":57,"revenue_hist":1220,"tel":"+593997050412","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"},{"nombre":"Kristty Gil","dias":116,"revenue_hist":1185,"tel":"+593991318888","ultServicio":"Peel Manchas","ultEsth":"Milena"}]</script>
 
 <script>
 function copyPhones(){
