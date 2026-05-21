@@ -139,10 +139,11 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .esth-card summary::-webkit-details-marker{display:none}
 .esth-card summary:hover{background:var(--cream)}
 .esth-card[open] summary{background:var(--cream);border-bottom:1px solid var(--sand)}
-.esth-head{display:grid;grid-template-columns:1fr 2fr auto;gap:16px;align-items:center}
+.esth-head{display:grid;grid-template-columns:1fr 2.5fr auto;gap:16px;align-items:center}
 .esth-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--dark)}
 .esth-sub{font-size:9px;color:var(--mid);letter-spacing:.05em;margin-top:1px}
-.esth-quick{display:flex;gap:18px}
+.esth-quick{display:flex;gap:14px;flex-wrap:wrap}
+.esth-quick>div{min-width:60px}
 .eq-label{font-size:8px;color:var(--mid);letter-spacing:.07em;text-transform:uppercase;font-weight:700}
 .eq-val{font-family:'DM Mono';font-size:13px;font-weight:700;color:var(--dark);margin-top:2px}
 .eq-val.verde{color:var(--verde)}.eq-val.ambar{color:var(--ambar)}.eq-val.rojo{color:var(--rojo)}
@@ -160,6 +161,16 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .trat-item{display:flex;justify-content:space-between;font-size:10px;padding:4px 0;border-bottom:1px dashed #f0ebe3}
 .trat-item:last-child{border-bottom:none}
 .trat-num{font-family:'DM Mono';color:var(--warm-dk);font-weight:700}
+
+/* ✅ v7.1 Mix de revenue por esteticista */
+.mix-section{border-bottom:1px solid var(--sand);padding-bottom:12px;margin-bottom:12px}
+.mix-bar{display:flex;height:18px;border-radius:10px;overflow:hidden;background:var(--sand);margin:6px 0 8px}
+.mix-seg{display:flex;align-items:center;justify-content:center;color:white;font-family:'DM Mono';font-size:9px;font-weight:700;transition:flex .2s}
+.mix-seg.sv{background:linear-gradient(90deg,var(--warm-dk),var(--warm))}
+.mix-seg.pr{background:linear-gradient(90deg,#6b8f71,#a8c5a0)}
+.mix-seg.mb{background:linear-gradient(90deg,#7b68aa,#b8a8d8)}
+.mix-legend{display:flex;gap:14px;font-size:9px;color:var(--mid);font-family:'DM Mono';flex-wrap:wrap}
+.ml.sv{color:var(--warm-dk)}.ml.pr{color:#5a7a60}.ml.mb{color:#6a5a99}
 
 .footer{text-align:center;padding:16px 28px;font-size:9px;color:var(--mid);border-top:1px solid var(--sand);margin-top:6px;letter-spacing:.05em}
 
@@ -285,16 +296,32 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
           <div><div class="eq-label">Citas</div><div class="eq-val">51</div></div>
           <div><div class="eq-label">Revenue</div><div class="eq-val">$6.038</div></div>
           <div><div class="eq-label">Ticket</div><div class="eq-val verde">$118</div></div>
+          <div><div class="eq-label">Membresías</div><div class="eq-val verde">$2.581</div></div>
         </div>
         <span class="esth-arrow">▾</span>
       </div>
     </summary>
     <div class="esth-detail">
+      <!-- ✅ v7.1: Desglose de revenue por categoría -->
+      <div class="mix-section">
+        <div class="trat-title">Mix de revenue del mes</div>
+        <div class="mix-bar">
+          <div class="mix-seg sv" style="width:57%" title="Servicios: $3412">57%</div>
+          <div class="mix-seg pr" style="width:1%" title="Productos: $45"></div>
+          <div class="mix-seg mb" style="width:43%" title="Membresías: $2581">43%</div>
+        </div>
+        <div class="mix-legend">
+          <span class="ml sv">● Servicios $3.412</span>
+          <span class="ml pr">● Productos $45</span>
+          <span class="ml mb">● Membresías $2.581</span>
+        </div>
+      </div>
       <div class="kpi-mini-grid">
         <div class="km verde"><div class="km-l">Ocupación</div><div class="km-v">72.9%</div></div>
         <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">0%</div></div>
         <div class="km rojo"><div class="km-l">Cancelación</div><div class="km-v">12.1%</div></div>
-        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">43.5%</div></div>
+        <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0.7%</div></div>
+        <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">42.7%</div></div>
         <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">56.1%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">48</div></div>
       </div>
@@ -314,16 +341,32 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
           <div><div class="eq-label">Citas</div><div class="eq-val">39</div></div>
           <div><div class="eq-label">Revenue</div><div class="eq-val">$3.023</div></div>
           <div><div class="eq-label">Ticket</div><div class="eq-val rojo">$78</div></div>
+          <div><div class="eq-label">Membresías</div><div class="eq-val verde">$2.027</div></div>
         </div>
         <span class="esth-arrow">▾</span>
       </div>
     </summary>
     <div class="esth-detail">
+      <!-- ✅ v7.1: Desglose de revenue por categoría -->
+      <div class="mix-section">
+        <div class="trat-title">Mix de revenue del mes</div>
+        <div class="mix-bar">
+          <div class="mix-seg sv" style="width:33%" title="Servicios: $983">33%</div>
+          <div class="mix-seg pr" style="width:0%" title="Productos: $13"></div>
+          <div class="mix-seg mb" style="width:67%" title="Membresías: $2027">67%</div>
+        </div>
+        <div class="mix-legend">
+          <span class="ml sv">● Servicios $983</span>
+          <span class="ml pr">● Productos $13</span>
+          <span class="ml mb">● Membresías $2.027</span>
+        </div>
+      </div>
       <div class="kpi-mini-grid">
         <div class="km ambar"><div class="km-l">Ocupación</div><div class="km-v">52%</div></div>
         <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">2.6%</div></div>
         <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">7.1%</div></div>
-        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">67.5%</div></div>
+        <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0.4%</div></div>
+        <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">67.1%</div></div>
         <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">68.9%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">36</div></div>
       </div>
@@ -343,16 +386,32 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
           <div><div class="eq-label">Citas</div><div class="eq-val">21</div></div>
           <div><div class="eq-label">Revenue</div><div class="eq-val">$2.448</div></div>
           <div><div class="eq-label">Ticket</div><div class="eq-val verde">$117</div></div>
+          <div><div class="eq-label">Membresías</div><div class="eq-val verde">$630</div></div>
         </div>
         <span class="esth-arrow">▾</span>
       </div>
     </summary>
     <div class="esth-detail">
+      <!-- ✅ v7.1: Desglose de revenue por categoría -->
+      <div class="mix-section">
+        <div class="trat-title">Mix de revenue del mes</div>
+        <div class="mix-bar">
+          <div class="mix-seg sv" style="width:74%" title="Servicios: $1818">74%</div>
+          <div class="mix-seg pr" style="width:0%" title="Productos: $0"></div>
+          <div class="mix-seg mb" style="width:26%" title="Membresías: $630">26%</div>
+        </div>
+        <div class="mix-legend">
+          <span class="ml sv">● Servicios $1.818</span>
+          <span class="ml pr">● Productos $0</span>
+          <span class="ml mb">● Membresías $630</span>
+        </div>
+      </div>
       <div class="kpi-mini-grid">
         <div class="km ambar"><div class="km-l">Ocupación</div><div class="km-v">60%</div></div>
         <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">0%</div></div>
         <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">8.7%</div></div>
-        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">25.7%</div></div>
+        <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0%</div></div>
+        <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">25.7%</div></div>
         <div class="km ambar"><div class="km-l">Retención 1ª</div><div class="km-v">48.4%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">21</div></div>
       </div>
@@ -372,16 +431,32 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
           <div><div class="eq-label">Citas</div><div class="eq-val">38</div></div>
           <div><div class="eq-label">Revenue</div><div class="eq-val">$2.445</div></div>
           <div><div class="eq-label">Ticket</div><div class="eq-val rojo">$64</div></div>
+          <div><div class="eq-label">Membresías</div><div class="eq-val verde">$1.225</div></div>
         </div>
         <span class="esth-arrow">▾</span>
       </div>
     </summary>
     <div class="esth-detail">
+      <!-- ✅ v7.1: Desglose de revenue por categoría -->
+      <div class="mix-section">
+        <div class="trat-title">Mix de revenue del mes</div>
+        <div class="mix-bar">
+          <div class="mix-seg sv" style="width:50%" title="Servicios: $1220">50%</div>
+          <div class="mix-seg pr" style="width:0%" title="Productos: $0"></div>
+          <div class="mix-seg mb" style="width:50%" title="Membresías: $1225">50%</div>
+        </div>
+        <div class="mix-legend">
+          <span class="ml sv">● Servicios $1.220</span>
+          <span class="ml pr">● Productos $0</span>
+          <span class="ml mb">● Membresías $1.225</span>
+        </div>
+      </div>
       <div class="kpi-mini-grid">
         <div class="km ambar"><div class="km-l">Ocupación</div><div class="km-v">58.5%</div></div>
         <div class="km rojo"><div class="km-l">Re-booking</div><div class="km-v">0%</div></div>
         <div class="km ambar"><div class="km-l">Cancelación</div><div class="km-v">11.6%</div></div>
-        <div class="km verde"><div class="km-l">% Producto</div><div class="km-v">50.1%</div></div>
+        <div class="km rojo"><div class="km-l">% Producto</div><div class="km-v">0%</div></div>
+        <div class="km verde"><div class="km-l">% Membresía</div><div class="km-v">50.1%</div></div>
         <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">63%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">35</div></div>
       </div>
@@ -598,30 +673,15 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   <div class="card">
     <div class="card-title">Top 5 productos <span class="badge" style="background:#6b8f71">Venta</span></div>
     <div class="svc-row">
-    <span class="svc-name">Gift Card $100</span>
+    <span class="svc-name">Green Tea Citrus Cleanser</span>
     <div class="svc-bar-wrap"><div class="svc-bar" style="width:100%;background:linear-gradient(90deg,#6b8f71,#a8c5a0)"></div></div>
-    <span class="svc-cnt">4u</span>
-    <span class="svc-rev">$400</span>
-  </div><div class="svc-row">
-    <span class="svc-name">Gift Card Mommy Glow $89</span>
-    <div class="svc-bar-wrap"><div class="svc-bar" style="width:89%;background:linear-gradient(90deg,#6b8f71,#a8c5a0)"></div></div>
-    <span class="svc-cnt">4u</span>
-    <span class="svc-rev">$356</span>
-  </div><div class="svc-row">
-    <span class="svc-name">Acai Berry Moisturizer</span>
-    <div class="svc-bar-wrap"><div class="svc-bar" style="width:30%;background:linear-gradient(90deg,#6b8f71,#a8c5a0)"></div></div>
-    <span class="svc-cnt">2u</span>
-    <span class="svc-rev">$120</span>
-  </div><div class="svc-row">
-    <span class="svc-name">Gift Card $80</span>
-    <div class="svc-bar-wrap"><div class="svc-bar" style="width:26%;background:linear-gradient(90deg,#6b8f71,#a8c5a0)"></div></div>
-    <span class="svc-cnt">2u</span>
-    <span class="svc-rev">$102</span>
-  </div><div class="svc-row">
-    <span class="svc-name">Gift Card $65</span>
-    <div class="svc-bar-wrap"><div class="svc-bar" style="width:16%;background:linear-gradient(90deg,#6b8f71,#a8c5a0)"></div></div>
     <span class="svc-cnt">1u</span>
-    <span class="svc-rev">$65</span>
+    <span class="svc-rev">$45</span>
+  </div><div class="svc-row">
+    <span class="svc-name">Bálsamo de Labios Uriage 15ml</span>
+    <div class="svc-bar-wrap"><div class="svc-bar" style="width:29%;background:linear-gradient(90deg,#6b8f71,#a8c5a0)"></div></div>
+    <span class="svc-cnt">1u</span>
+    <span class="svc-rev">$13</span>
   </div>
   </div>
   <div class="card">
@@ -662,7 +722,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
   </div>
   <div class="churn-summary">
     <div class="csb r"><div class="csb-num">174</div><div class="csb-lbl">ROJO · +45 días</div></div>
-    <div class="csb a"><div class="csb-num">60</div><div class="csb-lbl">ÁMBAR · 30–44 días</div></div>
+    <div class="csb a"><div class="csb-num">62</div><div class="csb-lbl">ÁMBAR · 30–44 días</div></div>
     <div class="csb v"><div class="csb-num">9</div><div class="csb-lbl">Pendientes mes</div></div>
     <div class="csb r" style="background:#fff5f5">
       <div class="csb-num" style="font-size:20px;color:var(--rojo)">$43.516</div>
@@ -925,7 +985,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 </div>
 
 </div>
-<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 21 may 2026 · Datos: Altegio API · 7:30 AM ECT · v7</div>
+<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 21 may 2026 · Datos: Altegio API · 7:30 AM ECT · v7.1</div>
 
 <!-- Hidden data for copy/export actions -->
 <script type="application/json" id="churnData">[{"nombre":"Michelle Vargas","dias":113,"revenue_hist":8591,"tel":"+992472086","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Martha Mata","dias":116,"revenue_hist":6146,"tel":"+380989939353","ultServicio":"Contorno de Labios","ultEsth":"Carla"},{"nombre":"Jannina Cabal","dias":74,"revenue_hist":5922,"tel":"+593994388429","ultServicio":"Exosomas + Tecnología Avanzada","ultEsth":"Carla"},{"nombre":"Julia Villares","dias":86,"revenue_hist":5782,"tel":"+986022465","ultServicio":"Intensif Estrías","ultEsth":"Carla"},{"nombre":"Erika Garaicoa","dias":83,"revenue_hist":4449,"tel":"+593980236493","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Michelle Swett","dias":51,"revenue_hist":3466,"tel":"+593997075064","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Lily Cueva","dias":47,"revenue_hist":2612,"tel":"+983454605","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Karla Pesantez","dias":85,"revenue_hist":2217,"tel":"+991486665","ultServicio":"Skin Booster AH","ultEsth":"Carla"},{"nombre":"Maria Isabel Petrinic","dias":106,"revenue_hist":2213,"tel":"+12016604506","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Gisella Ledesma","dias":121,"revenue_hist":2118,"tel":"+999572251","ultServicio":"Kim K Korean Facial","ultEsth":"Carla"},{"nombre":"Denise Sanabria","dias":49,"revenue_hist":1952,"tel":"+593993356804","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Raquel Del Valle","dias":48,"revenue_hist":1908,"tel":"+991516910","ultServicio":"Teens Facial","ultEsth":"Milena"},{"nombre":"Ximena Decker","dias":110,"revenue_hist":1882,"tel":"+983860976","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Walleska Bajaña","dias":65,"revenue_hist":1820,"tel":"+593983491620","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Milena Tettamanti","dias":55,"revenue_hist":1775,"tel":"+985200794","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Oriana Abreu","dias":51,"revenue_hist":1767,"tel":"+981650376","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Carolina Salcedo","dias":120,"revenue_hist":1734,"tel":"+380985449799","ultServicio":"Glacial Glide","ultEsth":"Carla"},{"nombre":"Arianna Ortega","dias":72,"revenue_hist":1490,"tel":"+593994500233","ultServicio":"Glacial Gloss","ultEsth":"Carla"},{"nombre":"Alberto Rosado","dias":69,"revenue_hist":1410,"tel":"+593983340243","ultServicio":"SkinPen + Exosomas","ultEsth":"Carla"},{"nombre":"Karla Scippa","dias":76,"revenue_hist":1400,"tel":"+593995237981","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Stefania Goncalves","dias":64,"revenue_hist":1393,"tel":"+992200465","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Claudia Bolona","dias":67,"revenue_hist":1365,"tel":"+593994347151","ultServicio":"Face Massage","ultEsth":"Karla"},{"nombre":"Stephanie Castillo","dias":82,"revenue_hist":1349,"tel":"+992059753","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Stefania Franco","dias":63,"revenue_hist":1340,"tel":"+993020253","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Gina Peña","dias":51,"revenue_hist":1226,"tel":"+593958921573","ultServicio":"Microneedling con PDRN","ultEsth":"Milena"},{"nombre":"Grace Cassis","dias":57,"revenue_hist":1220,"tel":"+593997050412","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"},{"nombre":"Kristty Gil","dias":116,"revenue_hist":1185,"tel":"+593991318888","ultServicio":"Peel Manchas","ultEsth":"Milena"},{"nombre":"Domenica Villavicencio","dias":114,"revenue_hist":1110,"tel":"+593939240096","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Yamara Cordova","dias":98,"revenue_hist":1107,"tel":"+593993914737","ultServicio":"Valentine´s Facial","ultEsth":"Milena"},{"nombre":"Rossana Romero","dias":58,"revenue_hist":1063,"tel":"+593986421196","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"}]</script>
