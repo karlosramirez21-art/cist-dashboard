@@ -172,6 +172,35 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 .mix-legend{display:flex;gap:14px;font-size:9px;color:var(--mid);font-family:'DM Mono';flex-wrap:wrap}
 .ml.sv{color:var(--warm-dk)}.ml.pr{color:#5a7a60}.ml.mb{color:#6a5a99}
 
+/* ✅ v7.2 Lealtad de clientas */
+.loyalty-section{border-top:1px solid var(--sand);padding-top:12px;margin-bottom:14px}
+.loyalty-sub{font-size:9px;color:var(--mid);font-weight:400;letter-spacing:0;text-transform:none;margin-left:6px}
+.loyalty-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+@media(max-width:600px){.loyalty-grid{grid-template-columns:repeat(2,1fr)}}
+.loyalty-card{padding:10px 12px;border-radius:10px;text-align:center;border:1px solid}
+.loyalty-card.excl{background:#e8f5ee;border-color:#a0d4b8}
+.loyalty-card.leal{background:#e8f0f8;border-color:#9bb4d4}
+.loyalty-card.comp{background:#fef6e6;border-color:#f0d090}
+.loyalty-card.prest{background:#fdecea;border-color:#e8b4b0}
+.lc-num{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;line-height:1}
+.loyalty-card.excl .lc-num{color:var(--verde)}
+.loyalty-card.leal .lc-num{color:#3a5a8a}
+.loyalty-card.comp .lc-num{color:var(--ambar)}
+.loyalty-card.prest .lc-num{color:var(--rojo)}
+.lc-pct{font-family:'DM Mono';font-size:10px;color:var(--mid);font-weight:700;margin-top:1px}
+.lc-lbl{font-size:9px;font-weight:700;letter-spacing:.05em;color:var(--dark);margin-top:4px;text-transform:uppercase}
+.lc-desc{font-size:8px;color:var(--mid);margin-top:2px}
+
+/* ✅ v7.2 Tabla top clientas frecuentes */
+.top-clientas-table{width:100%;border-collapse:collapse;font-size:10px;margin-top:4px}
+.top-clientas-table th{text-align:left;color:var(--mid);font-weight:600;font-size:9px;letter-spacing:.05em;padding:3px 0 6px;border-bottom:1px solid var(--sand)}
+.top-clientas-table td{padding:5px 0;border-bottom:1px dashed #f0ebe3;vertical-align:middle}
+.top-clientas-table tr:last-child td{border-bottom:none}
+.estado-dot{display:inline-block;width:10px;height:10px;border-radius:50%}
+.estado-dot.verde{background:var(--verde)}
+.estado-dot.ambar{background:var(--ambar)}
+.estado-dot.rojo{background:var(--rojo)}
+
 .footer{text-align:center;padding:16px 28px;font-size:9px;color:var(--mid);border-top:1px solid var(--sand);margin-top:6px;letter-spacing:.05em}
 
 /* Hidden CSV/Telefonos data for copy */
@@ -325,6 +354,129 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">56.1%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">48</div></div>
       </div>
+
+      <!-- ✅ v7.2: Lealtad de clientas -->
+      <div class="loyalty-section">
+        <div class="trat-title">Lealtad de clientas del mes
+          <span class="loyalty-sub">48 clientas analizadas (130d historia)</span>
+        </div>
+        <div class="loyalty-grid">
+          <div class="loyalty-card excl">
+            <div class="lc-num">28</div>
+            <div class="lc-pct">58%</div>
+            <div class="lc-lbl">Exclusivas</div>
+            <div class="lc-desc">100% con ella</div>
+          </div>
+          <div class="loyalty-card leal">
+            <div class="lc-num">2</div>
+            <div class="lc-pct">4%</div>
+            <div class="lc-lbl">Leales</div>
+            <div class="lc-desc">70-99% con ella</div>
+          </div>
+          <div class="loyalty-card comp">
+            <div class="lc-num">15</div>
+            <div class="lc-pct">31%</div>
+            <div class="lc-lbl">Compartidas</div>
+            <div class="lc-desc">30-69% con ella</div>
+          </div>
+          <div class="loyalty-card prest">
+            <div class="lc-num">3</div>
+            <div class="lc-pct">6%</div>
+            <div class="lc-lbl">Prestadas</div>
+            <div class="lc-desc">&lt;30% con ella</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ v7.2: Top 10 clientas frecuentes -->
+      <div class="trat-section">
+        <div class="trat-title">Top 10 clientas frecuentes con Carla (130d)</div>
+        <table class="top-clientas-table">
+            <thead><tr><th>#</th><th>Cliente</th><th>Visitas con ella</th><th>Total CIST</th><th>% con ella</th><th>Últ. visita</th><th>Estado</th></tr></thead>
+            <tbody><tr>
+              <td class="rank">#1</td>
+              <td class="cli-name">Belén Olvera</td>
+              <td class="num-strong">6</td>
+              <td class="num">6</td>
+              <td class="num pct">100%</td>
+              <td class="num">14d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#2</td>
+              <td class="cli-name">Katherine Zamora</td>
+              <td class="num-strong">5</td>
+              <td class="num">10</td>
+              <td class="num pct">50%</td>
+              <td class="num">2d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#3</td>
+              <td class="cli-name">Cristina Fienco</td>
+              <td class="num-strong">5</td>
+              <td class="num">5</td>
+              <td class="num pct">100%</td>
+              <td class="num">19d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#4</td>
+              <td class="cli-name">Yemima Moncayo</td>
+              <td class="num-strong">4</td>
+              <td class="num">4</td>
+              <td class="num pct">100%</td>
+              <td class="num">5d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#5</td>
+              <td class="cli-name">Isabela Alarcon</td>
+              <td class="num-strong">4</td>
+              <td class="num">4</td>
+              <td class="num pct">100%</td>
+              <td class="num">7d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#6</td>
+              <td class="cli-name">Veronica Carrion</td>
+              <td class="num-strong">4</td>
+              <td class="num">4</td>
+              <td class="num pct">100%</td>
+              <td class="num">7d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#7</td>
+              <td class="cli-name">Yanela Zambrano</td>
+              <td class="num-strong">4</td>
+              <td class="num">4</td>
+              <td class="num pct">100%</td>
+              <td class="num">12d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#8</td>
+              <td class="cli-name">Andrea Hurel</td>
+              <td class="num-strong">4</td>
+              <td class="num">7</td>
+              <td class="num pct">57%</td>
+              <td class="num">14d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#9</td>
+              <td class="cli-name">Carolina Ibarra</td>
+              <td class="num-strong">3</td>
+              <td class="num">4</td>
+              <td class="num pct">75%</td>
+              <td class="num">2d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#10</td>
+              <td class="cli-name">Karla Alban</td>
+              <td class="num-strong">3</td>
+              <td class="num">4</td>
+              <td class="num pct">75%</td>
+              <td class="num">3d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr></tbody>
+          </table>
+      </div>
+
       <div class="trat-section">
         <div class="trat-title">Top 3 tratamientos que hace</div>
         <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">18</span></div><div class="trat-item"><span>Glacial Gloss</span><span class="trat-num">9</span></div><div class="trat-item"><span>Contorno de Labios</span><span class="trat-num">6</span></div>
@@ -370,6 +522,129 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">68.9%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">36</div></div>
       </div>
+
+      <!-- ✅ v7.2: Lealtad de clientas -->
+      <div class="loyalty-section">
+        <div class="trat-title">Lealtad de clientas del mes
+          <span class="loyalty-sub">36 clientas analizadas (130d historia)</span>
+        </div>
+        <div class="loyalty-grid">
+          <div class="loyalty-card excl">
+            <div class="lc-num">15</div>
+            <div class="lc-pct">42%</div>
+            <div class="lc-lbl">Exclusivas</div>
+            <div class="lc-desc">100% con ella</div>
+          </div>
+          <div class="loyalty-card leal">
+            <div class="lc-num">3</div>
+            <div class="lc-pct">8%</div>
+            <div class="lc-lbl">Leales</div>
+            <div class="lc-desc">70-99% con ella</div>
+          </div>
+          <div class="loyalty-card comp">
+            <div class="lc-num">16</div>
+            <div class="lc-pct">44%</div>
+            <div class="lc-lbl">Compartidas</div>
+            <div class="lc-desc">30-69% con ella</div>
+          </div>
+          <div class="loyalty-card prest">
+            <div class="lc-num">2</div>
+            <div class="lc-pct">6%</div>
+            <div class="lc-lbl">Prestadas</div>
+            <div class="lc-desc">&lt;30% con ella</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ v7.2: Top 10 clientas frecuentes -->
+      <div class="trat-section">
+        <div class="trat-title">Top 10 clientas frecuentes con Karla (130d)</div>
+        <table class="top-clientas-table">
+            <thead><tr><th>#</th><th>Cliente</th><th>Visitas con ella</th><th>Total CIST</th><th>% con ella</th><th>Últ. visita</th><th>Estado</th></tr></thead>
+            <tbody><tr>
+              <td class="rank">#1</td>
+              <td class="cli-name">Samy Sánchez</td>
+              <td class="num-strong">8</td>
+              <td class="num">13</td>
+              <td class="num pct">62%</td>
+              <td class="num">7d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#2</td>
+              <td class="cli-name">Maria Jose Villacis</td>
+              <td class="num-strong">6</td>
+              <td class="num">8</td>
+              <td class="num pct">75%</td>
+              <td class="num">13d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#3</td>
+              <td class="cli-name">Nathalia Basantes</td>
+              <td class="num-strong">5</td>
+              <td class="num">5</td>
+              <td class="num pct">100%</td>
+              <td class="num">8d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#4</td>
+              <td class="cli-name">Elizabeth López</td>
+              <td class="num-strong">4</td>
+              <td class="num">6</td>
+              <td class="num pct">67%</td>
+              <td class="num">4d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#5</td>
+              <td class="cli-name">Geoconda Toala</td>
+              <td class="num-strong">4</td>
+              <td class="num">5</td>
+              <td class="num pct">80%</td>
+              <td class="num">19d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#6</td>
+              <td class="cli-name">Kiara Rodriguez</td>
+              <td class="num-strong">3</td>
+              <td class="num">3</td>
+              <td class="num pct">100%</td>
+              <td class="num">2d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#7</td>
+              <td class="cli-name">Magali Velastegui</td>
+              <td class="num-strong">3</td>
+              <td class="num">3</td>
+              <td class="num pct">100%</td>
+              <td class="num">5d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#8</td>
+              <td class="cli-name">Verónica Gumbs</td>
+              <td class="num-strong">3</td>
+              <td class="num">5</td>
+              <td class="num pct">60%</td>
+              <td class="num">7d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#9</td>
+              <td class="cli-name">Bertha Rosero</td>
+              <td class="num-strong">3</td>
+              <td class="num">4</td>
+              <td class="num pct">75%</td>
+              <td class="num">14d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#10</td>
+              <td class="cli-name">Sulay Ramirez</td>
+              <td class="num-strong">3</td>
+              <td class="num">3</td>
+              <td class="num pct">100%</td>
+              <td class="num">15d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr></tbody>
+          </table>
+      </div>
+
       <div class="trat-section">
         <div class="trat-title">Top 3 tratamientos que hace</div>
         <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">8</span></div><div class="trat-item"><span>Shaper</span><span class="trat-num">7</span></div><div class="trat-item"><span>Glacial Glide</span><span class="trat-num">5</span></div>
@@ -415,6 +690,129 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km ambar"><div class="km-l">Retención 1ª</div><div class="km-v">48.4%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">21</div></div>
       </div>
+
+      <!-- ✅ v7.2: Lealtad de clientas -->
+      <div class="loyalty-section">
+        <div class="trat-title">Lealtad de clientas del mes
+          <span class="loyalty-sub">21 clientas analizadas (130d historia)</span>
+        </div>
+        <div class="loyalty-grid">
+          <div class="loyalty-card excl">
+            <div class="lc-num">11</div>
+            <div class="lc-pct">52%</div>
+            <div class="lc-lbl">Exclusivas</div>
+            <div class="lc-desc">100% con ella</div>
+          </div>
+          <div class="loyalty-card leal">
+            <div class="lc-num">1</div>
+            <div class="lc-pct">5%</div>
+            <div class="lc-lbl">Leales</div>
+            <div class="lc-desc">70-99% con ella</div>
+          </div>
+          <div class="loyalty-card comp">
+            <div class="lc-num">8</div>
+            <div class="lc-pct">38%</div>
+            <div class="lc-lbl">Compartidas</div>
+            <div class="lc-desc">30-69% con ella</div>
+          </div>
+          <div class="loyalty-card prest">
+            <div class="lc-num">1</div>
+            <div class="lc-pct">5%</div>
+            <div class="lc-lbl">Prestadas</div>
+            <div class="lc-desc">&lt;30% con ella</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ v7.2: Top 10 clientas frecuentes -->
+      <div class="trat-section">
+        <div class="trat-title">Top 10 clientas frecuentes con Milena (130d)</div>
+        <table class="top-clientas-table">
+            <thead><tr><th>#</th><th>Cliente</th><th>Visitas con ella</th><th>Total CIST</th><th>% con ella</th><th>Últ. visita</th><th>Estado</th></tr></thead>
+            <tbody><tr>
+              <td class="rank">#1</td>
+              <td class="cli-name">Ana María Rivadeneira</td>
+              <td class="num-strong">9</td>
+              <td class="num">14</td>
+              <td class="num pct">64%</td>
+              <td class="num">8d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#2</td>
+              <td class="cli-name">Elvira Dominguez</td>
+              <td class="num-strong">4</td>
+              <td class="num">4</td>
+              <td class="num pct">100%</td>
+              <td class="num">7d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#3</td>
+              <td class="cli-name">Samantha Sánchez</td>
+              <td class="num-strong">3</td>
+              <td class="num">3</td>
+              <td class="num pct">100%</td>
+              <td class="num">6d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#4</td>
+              <td class="cli-name">María Fernanda Hidalgo</td>
+              <td class="num-strong">3</td>
+              <td class="num">4</td>
+              <td class="num pct">75%</td>
+              <td class="num">9d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#5</td>
+              <td class="cli-name">Nancy Alvarez</td>
+              <td class="num-strong">2</td>
+              <td class="num">3</td>
+              <td class="num pct">67%</td>
+              <td class="num">5d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#6</td>
+              <td class="cli-name">Karla Calderon</td>
+              <td class="num-strong">2</td>
+              <td class="num">2</td>
+              <td class="num pct">100%</td>
+              <td class="num">8d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#7</td>
+              <td class="cli-name">Korina Romero</td>
+              <td class="num-strong">2</td>
+              <td class="num">2</td>
+              <td class="num pct">100%</td>
+              <td class="num">18d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#8</td>
+              <td class="cli-name">Nicole Jaramillo</td>
+              <td class="num-strong">1</td>
+              <td class="num">2</td>
+              <td class="num pct">50%</td>
+              <td class="num">2d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#9</td>
+              <td class="cli-name">Diana Morla</td>
+              <td class="num-strong">1</td>
+              <td class="num">2</td>
+              <td class="num pct">50%</td>
+              <td class="num">2d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#10</td>
+              <td class="cli-name">Yajaira Paucar</td>
+              <td class="num-strong">1</td>
+              <td class="num">1</td>
+              <td class="num pct">100%</td>
+              <td class="num">5d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr></tbody>
+          </table>
+      </div>
+
       <div class="trat-section">
         <div class="trat-title">Top 3 tratamientos que hace</div>
         <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">3</span></div><div class="trat-item"><span>Facial Express Personalizado</span><span class="trat-num">2</span></div><div class="trat-item"><span>Shaper</span><span class="trat-num">2</span></div>
@@ -460,6 +858,129 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
         <div class="km verde"><div class="km-l">Retención 1ª</div><div class="km-v">63%</div></div>
         <div class="km"><div class="km-l">Clientas únicas</div><div class="km-v">35</div></div>
       </div>
+
+      <!-- ✅ v7.2: Lealtad de clientas -->
+      <div class="loyalty-section">
+        <div class="trat-title">Lealtad de clientas del mes
+          <span class="loyalty-sub">35 clientas analizadas (130d historia)</span>
+        </div>
+        <div class="loyalty-grid">
+          <div class="loyalty-card excl">
+            <div class="lc-num">14</div>
+            <div class="lc-pct">40%</div>
+            <div class="lc-lbl">Exclusivas</div>
+            <div class="lc-desc">100% con ella</div>
+          </div>
+          <div class="loyalty-card leal">
+            <div class="lc-num">2</div>
+            <div class="lc-pct">6%</div>
+            <div class="lc-lbl">Leales</div>
+            <div class="lc-desc">70-99% con ella</div>
+          </div>
+          <div class="loyalty-card comp">
+            <div class="lc-num">11</div>
+            <div class="lc-pct">31%</div>
+            <div class="lc-lbl">Compartidas</div>
+            <div class="lc-desc">30-69% con ella</div>
+          </div>
+          <div class="loyalty-card prest">
+            <div class="lc-num">8</div>
+            <div class="lc-pct">23%</div>
+            <div class="lc-lbl">Prestadas</div>
+            <div class="lc-desc">&lt;30% con ella</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✅ v7.2: Top 10 clientas frecuentes -->
+      <div class="trat-section">
+        <div class="trat-title">Top 10 clientas frecuentes con Milena (130d)</div>
+        <table class="top-clientas-table">
+            <thead><tr><th>#</th><th>Cliente</th><th>Visitas con ella</th><th>Total CIST</th><th>% con ella</th><th>Últ. visita</th><th>Estado</th></tr></thead>
+            <tbody><tr>
+              <td class="rank">#1</td>
+              <td class="cli-name">Karla Molina</td>
+              <td class="num-strong">6</td>
+              <td class="num">7</td>
+              <td class="num pct">86%</td>
+              <td class="num">13d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#2</td>
+              <td class="cli-name">Bianca Bravo</td>
+              <td class="num-strong">5</td>
+              <td class="num">6</td>
+              <td class="num pct">83%</td>
+              <td class="num">8d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#3</td>
+              <td class="cli-name">Cristina Amador</td>
+              <td class="num-strong">4</td>
+              <td class="num">4</td>
+              <td class="num pct">100%</td>
+              <td class="num">1d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#4</td>
+              <td class="cli-name">Karina Luces</td>
+              <td class="num-strong">3</td>
+              <td class="num">8</td>
+              <td class="num pct">38%</td>
+              <td class="num">6d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#5</td>
+              <td class="cli-name">Carla Infante</td>
+              <td class="num-strong">2</td>
+              <td class="num">3</td>
+              <td class="num pct">67%</td>
+              <td class="num">1d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#6</td>
+              <td class="cli-name">Alisson Zambrano</td>
+              <td class="num-strong">2</td>
+              <td class="num">3</td>
+              <td class="num pct">67%</td>
+              <td class="num">2d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#7</td>
+              <td class="cli-name">Grace Riascos</td>
+              <td class="num-strong">2</td>
+              <td class="num">7</td>
+              <td class="num pct">29%</td>
+              <td class="num">2d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#8</td>
+              <td class="cli-name">Samy Sánchez</td>
+              <td class="num-strong">2</td>
+              <td class="num">13</td>
+              <td class="num pct">15%</td>
+              <td class="num">7d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#9</td>
+              <td class="cli-name">Víctor Vaca</td>
+              <td class="num-strong">2</td>
+              <td class="num">2</td>
+              <td class="num pct">100%</td>
+              <td class="num">8d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr><tr>
+              <td class="rank">#10</td>
+              <td class="cli-name">Gabriela Salame</td>
+              <td class="num-strong">2</td>
+              <td class="num">4</td>
+              <td class="num pct">50%</td>
+              <td class="num">9d</td>
+              <td><span class="estado-dot verde"></span></td>
+            </tr></tbody>
+          </table>
+      </div>
+
       <div class="trat-section">
         <div class="trat-title">Top 3 tratamientos que hace</div>
         <div class="trat-item"><span>Hydrafacial MD</span><span class="trat-num">4</span></div><div class="trat-item"><span>Glacial Glide</span><span class="trat-num">4</span></div><div class="trat-item"><span>The Experience Skin Therapy</span><span class="trat-num">4</span></div>
@@ -751,7 +1272,7 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
     <td class="rank">#2</td>
     <td class="cli-name">Martha Mata</td>
     <td class="num-strong">$6.146</td>
-    <td><span class="dias-badge" style="background:#c0392b">116d</span></td>
+    <td><span class="dias-badge" style="background:#c0392b">117d</span></td>
     <td class="serv-cell">Contorno de Labios</td>
     <td class="esth-cell">Carla</td>
     <td class="tel">+380989939353</td>
@@ -985,10 +1506,10 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--dar
 </div>
 
 </div>
-<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 21 may 2026 · Datos: Altegio API · 7:30 AM ECT · v7.1</div>
+<div class="footer">Carla Infante Skin Therapy · Los Arcos Plaza 2, Samborondón · 21 may 2026 · Datos: Altegio API · 7:30 AM ECT · v7.2</div>
 
 <!-- Hidden data for copy/export actions -->
-<script type="application/json" id="churnData">[{"nombre":"Michelle Vargas","dias":113,"revenue_hist":8591,"tel":"+992472086","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Martha Mata","dias":116,"revenue_hist":6146,"tel":"+380989939353","ultServicio":"Contorno de Labios","ultEsth":"Carla"},{"nombre":"Jannina Cabal","dias":74,"revenue_hist":5922,"tel":"+593994388429","ultServicio":"Exosomas + Tecnología Avanzada","ultEsth":"Carla"},{"nombre":"Julia Villares","dias":86,"revenue_hist":5782,"tel":"+986022465","ultServicio":"Intensif Estrías","ultEsth":"Carla"},{"nombre":"Erika Garaicoa","dias":83,"revenue_hist":4449,"tel":"+593980236493","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Michelle Swett","dias":51,"revenue_hist":3466,"tel":"+593997075064","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Lily Cueva","dias":47,"revenue_hist":2612,"tel":"+983454605","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Karla Pesantez","dias":85,"revenue_hist":2217,"tel":"+991486665","ultServicio":"Skin Booster AH","ultEsth":"Carla"},{"nombre":"Maria Isabel Petrinic","dias":106,"revenue_hist":2213,"tel":"+12016604506","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Gisella Ledesma","dias":121,"revenue_hist":2118,"tel":"+999572251","ultServicio":"Kim K Korean Facial","ultEsth":"Carla"},{"nombre":"Denise Sanabria","dias":49,"revenue_hist":1952,"tel":"+593993356804","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Raquel Del Valle","dias":48,"revenue_hist":1908,"tel":"+991516910","ultServicio":"Teens Facial","ultEsth":"Milena"},{"nombre":"Ximena Decker","dias":110,"revenue_hist":1882,"tel":"+983860976","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Walleska Bajaña","dias":65,"revenue_hist":1820,"tel":"+593983491620","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Milena Tettamanti","dias":55,"revenue_hist":1775,"tel":"+985200794","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Oriana Abreu","dias":51,"revenue_hist":1767,"tel":"+981650376","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Carolina Salcedo","dias":120,"revenue_hist":1734,"tel":"+380985449799","ultServicio":"Glacial Glide","ultEsth":"Carla"},{"nombre":"Arianna Ortega","dias":72,"revenue_hist":1490,"tel":"+593994500233","ultServicio":"Glacial Gloss","ultEsth":"Carla"},{"nombre":"Alberto Rosado","dias":69,"revenue_hist":1410,"tel":"+593983340243","ultServicio":"SkinPen + Exosomas","ultEsth":"Carla"},{"nombre":"Karla Scippa","dias":76,"revenue_hist":1400,"tel":"+593995237981","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Stefania Goncalves","dias":64,"revenue_hist":1393,"tel":"+992200465","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Claudia Bolona","dias":67,"revenue_hist":1365,"tel":"+593994347151","ultServicio":"Face Massage","ultEsth":"Karla"},{"nombre":"Stephanie Castillo","dias":82,"revenue_hist":1349,"tel":"+992059753","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Stefania Franco","dias":63,"revenue_hist":1340,"tel":"+993020253","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Gina Peña","dias":51,"revenue_hist":1226,"tel":"+593958921573","ultServicio":"Microneedling con PDRN","ultEsth":"Milena"},{"nombre":"Grace Cassis","dias":57,"revenue_hist":1220,"tel":"+593997050412","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"},{"nombre":"Kristty Gil","dias":116,"revenue_hist":1185,"tel":"+593991318888","ultServicio":"Peel Manchas","ultEsth":"Milena"},{"nombre":"Domenica Villavicencio","dias":114,"revenue_hist":1110,"tel":"+593939240096","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Yamara Cordova","dias":98,"revenue_hist":1107,"tel":"+593993914737","ultServicio":"Valentine´s Facial","ultEsth":"Milena"},{"nombre":"Rossana Romero","dias":58,"revenue_hist":1063,"tel":"+593986421196","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"}]</script>
+<script type="application/json" id="churnData">[{"nombre":"Michelle Vargas","dias":113,"revenue_hist":8591,"tel":"+992472086","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Martha Mata","dias":117,"revenue_hist":6146,"tel":"+380989939353","ultServicio":"Contorno de Labios","ultEsth":"Carla"},{"nombre":"Jannina Cabal","dias":74,"revenue_hist":5922,"tel":"+593994388429","ultServicio":"Exosomas + Tecnología Avanzada","ultEsth":"Carla"},{"nombre":"Julia Villares","dias":86,"revenue_hist":5782,"tel":"+986022465","ultServicio":"Intensif Estrías","ultEsth":"Carla"},{"nombre":"Erika Garaicoa","dias":83,"revenue_hist":4449,"tel":"+593980236493","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Michelle Swett","dias":51,"revenue_hist":3466,"tel":"+593997075064","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Lily Cueva","dias":47,"revenue_hist":2612,"tel":"+983454605","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Karla Pesantez","dias":85,"revenue_hist":2217,"tel":"+991486665","ultServicio":"Skin Booster AH","ultEsth":"Carla"},{"nombre":"Maria Isabel Petrinic","dias":106,"revenue_hist":2213,"tel":"+12016604506","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Gisella Ledesma","dias":121,"revenue_hist":2118,"tel":"+999572251","ultServicio":"Kim K Korean Facial","ultEsth":"Carla"},{"nombre":"Denise Sanabria","dias":49,"revenue_hist":1952,"tel":"+593993356804","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Raquel Del Valle","dias":48,"revenue_hist":1908,"tel":"+991516910","ultServicio":"Teens Facial","ultEsth":"Milena"},{"nombre":"Ximena Decker","dias":110,"revenue_hist":1882,"tel":"+983860976","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Walleska Bajaña","dias":65,"revenue_hist":1820,"tel":"+593983491620","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Milena Tettamanti","dias":55,"revenue_hist":1775,"tel":"+985200794","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Oriana Abreu","dias":51,"revenue_hist":1767,"tel":"+981650376","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Carolina Salcedo","dias":120,"revenue_hist":1734,"tel":"+380985449799","ultServicio":"Glacial Glide","ultEsth":"Carla"},{"nombre":"Arianna Ortega","dias":72,"revenue_hist":1490,"tel":"+593994500233","ultServicio":"Glacial Gloss","ultEsth":"Carla"},{"nombre":"Alberto Rosado","dias":69,"revenue_hist":1410,"tel":"+593983340243","ultServicio":"SkinPen + Exosomas","ultEsth":"Carla"},{"nombre":"Karla Scippa","dias":76,"revenue_hist":1400,"tel":"+593995237981","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Stefania Goncalves","dias":64,"revenue_hist":1393,"tel":"+992200465","ultServicio":"Hydrafacial MD","ultEsth":"Milena"},{"nombre":"Claudia Bolona","dias":67,"revenue_hist":1365,"tel":"+593994347151","ultServicio":"Face Massage","ultEsth":"Karla"},{"nombre":"Stephanie Castillo","dias":82,"revenue_hist":1349,"tel":"+992059753","ultServicio":"Glacial Gloss","ultEsth":"Milena"},{"nombre":"Stefania Franco","dias":63,"revenue_hist":1340,"tel":"+993020253","ultServicio":"—","ultEsth":"Carla"},{"nombre":"Gina Peña","dias":51,"revenue_hist":1226,"tel":"+593958921573","ultServicio":"Microneedling con PDRN","ultEsth":"Milena"},{"nombre":"Grace Cassis","dias":57,"revenue_hist":1220,"tel":"+593997050412","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"},{"nombre":"Kristty Gil","dias":116,"revenue_hist":1185,"tel":"+593991318888","ultServicio":"Peel Manchas","ultEsth":"Milena"},{"nombre":"Domenica Villavicencio","dias":114,"revenue_hist":1110,"tel":"+593939240096","ultServicio":"Hydrafacial MD","ultEsth":"Carla"},{"nombre":"Yamara Cordova","dias":98,"revenue_hist":1107,"tel":"+593993914737","ultServicio":"Valentine´s Facial","ultEsth":"Milena"},{"nombre":"Rossana Romero","dias":58,"revenue_hist":1063,"tel":"+593986421196","ultServicio":"Kim K Korean Facial","ultEsth":"Milena"}]</script>
 
 <script>
 function copyPhones(){
